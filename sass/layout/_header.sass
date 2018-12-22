@@ -1,0 +1,26 @@
+.header
+  height: 95vh
+  background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/hero_1280_720.jpg")
+  background-size: cover
+  background-position: top
+  position: relative
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+  &__logo
+    height: 6rem
+    animation: roar 2s ease-out 2s
+    clip-path: circle(2.5rem at 3rem 3rem)
+    &-box
+      position: absolute
+      top: 4rem
+      left: 4rem
+      &:hover .header__logo
+        height: 6rem
+        animation: roar 2s ease-out 2s
+        clip-path: circle(2.5rem at 3rem 3rem)
+  &__text-box
+    position: absolute
+    top: 40%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center

@@ -1,0 +1,21 @@
+$field-piece-radius: 50px
+
+.field
+  position: relative
+.field-piece
+  position: relative
+  background: #eee
+  &::after
+    background: green
+    content: ""
+    display: inline-block
+    cursor: pointer
+    border-color: transparent transparent transparent #fff
+    border-style: solid
+    border-width: $field-piece-radius
+    border-radius: 100%
+    transform: rotate(45deg)
+
+    clip-path: polygon(0 0, $field-piece-radius $field-piece-radius, 0 $field-piece-radius * 2)
+    &:hover
+      cursor: pointer

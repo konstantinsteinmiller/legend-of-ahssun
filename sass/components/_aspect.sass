@@ -1,0 +1,11 @@
+$w: 16
+$h: 9
+.aspect
+  background: #777777
+  width: 100%
+  max-width: $w / $h *  100vh
+  position: relative
+  &:after
+    content: ''
+    display: block
+    padding-bottom: ($h / $w) * 100%

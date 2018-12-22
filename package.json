@@ -1,0 +1,18 @@
+{
+  "name": "legend-of-asshun",
+  "version": "1.0.0",
+  "description": "LoA Webpage for the Release by @LoA Team 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-sass sass/main.sass css/style.css -w"
+  },
+  "author": "Konstantin Steinmiller",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "@icon/linea-basic": "^1.0.0-alpha.2"
+  }
+}

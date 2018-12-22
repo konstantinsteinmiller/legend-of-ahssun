@@ -1,0 +1,58 @@
+body
+  font-family: "Lato", sans-serif
+  font-weight: 400
+  font-size: $f-default
+  line-height: 1.7
+  color: $color-grey-dark-2
+  padding: 2rem
+
+.heading-primary
+  font-family: charmingExpanded
+  color: $color-assun
+  white-space: nowrap
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black
+  &--main
+    //text-transform: uppercase
+    font-size: 10rem
+    font-weight: 400
+    letter-spacing: 0.6rem
+    animation: moveInTop 2s ease-out
+
+  &--sub
+    color: $color-assun
+    font-size: 2.8rem
+    letter-spacing: 0.5rem
+    font-weight: 400
+    left: 0
+    animation: moveInFront 2s ease-out
+    margin-bottom: 2rem
+
+.heading-secondary
+  font-family: charmingExpanded
+  //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+  font-size: 5rem
+  //text-transform: uppercase
+  font-weight: 700
+  display: inline-block
+  background-image: linear-gradient(to right, rgba($color-primary-light, .9), rgba($color-primary-dark, .9))
+  //background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark)
+  -webkit-background-clip: text
+  color: transparent
+  letter-spacing: .2rem
+  transition: all .2s
+  animation: moveInLeft 1s ease
+
+  &:hover
+    transform: skewY(2deg) skewX(15deg) scale(1.1)
+    text-shadow: .5rem 1rem 2rem rgba(darken($color-primary-dark, 20%), 0.3)
+
+.heading-tertiary
+  text-align: left
+  font-size: $f-default
+  font-weight: 700
+  text-transform: uppercase
+
+.paragraph
+  font-size: $f-default
+  &:not(:last-child)
+    margin-bottom: 3rem

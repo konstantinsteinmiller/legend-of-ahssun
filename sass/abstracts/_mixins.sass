@@ -1,0 +1,19 @@
+@mixin clearfix
+  &::after
+    content: ''
+    display: table
+    clear: both
+
+@mixin gradientText($colorFrom, $colorTo)
+  background-image: linear-gradient(to right, $colorFrom, $colorTo)
+  -webkit-background-clip: text
+  color: transparent
+
+@mixin hoveringShadowSmall
+  box-shadow: 0 1.5rem 4rem 1rem rgba($color-black, .3)
+
+@mixin centerHorizontalVertical
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
