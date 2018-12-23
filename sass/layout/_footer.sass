@@ -11,7 +11,7 @@
     text-align: center
     @include respond(phone)
       margin-bottom: 2rem
-  &__logo
+  &__logo, &__logo > img
     width: 15rem
     height: auto
     border-radius: 50%
@@ -57,11 +57,9 @@
     border-top: .1rem solid $color-grey-dark-2
     padding-top: 2rem
     width: 80%
-    float: right
     @include respond(tab-port)
       width: 100%
       text-align: center
-      float: none
   &__copyright &__link
     color: $color-primary-dark
     text-transform: none

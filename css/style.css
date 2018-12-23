@@ -1030,7 +1030,7 @@ body {
     @media (max-width: 37.5em) {
       .footer__logo-box {
         margin-bottom: 2rem; } }
-  .footer__logo {
+  .footer__logo, .footer__logo > img {
     width: 15rem;
     height: auto;
     border-radius: 50%;
@@ -1069,13 +1069,11 @@ body {
     text-align: left;
     border-top: 0.1rem solid #777;
     padding-top: 2rem;
-    width: 80%;
-    float: right; }
+    width: 80%; }
     @media (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
-        text-align: center;
-        float: none; } }
+        text-align: center; } }
   .footer__copyright .footer__link {
     color: #CFB53B;
     text-transform: none; }
@@ -1115,7 +1113,7 @@ body {
     .section-stories {
       padding: 10rem 0; }
       .section-stories .row {
-        max-width: 65rem; } }
+        max-width: 80%; } }
 
 .section__book {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)), url(../img/1920_1080/Kapitel6.jpg);
