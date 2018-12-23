@@ -13,6 +13,7 @@
     //color: black
     font-size: 2rem
     width: 100%
+    -webkit-backface-visibility: hidden
     backface-visibility: hidden
     transition: all .8s ease
     border-radius: 5px
@@ -62,9 +63,10 @@
     background-size: cover
     height: 23rem
     background-blend-mode: overlay
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
     border-radius: $border-radius
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
 
   &__heading
     font-size: 2.8rem
@@ -138,7 +140,9 @@
         border-bottom-left-radius: $border-radius
         border-bottom-right-radius: $border-radius
         transform: rotateY(0)
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
+          -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
 
     &:hover &__side--front
       transform: rotateY(0)

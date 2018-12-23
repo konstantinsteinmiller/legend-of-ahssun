@@ -50,7 +50,9 @@
   50%
     height: 8rem
     transform: translate(-1rem, -1rem) rotateY(0.5turn)
-    clip-path: circle(4rem at 4rem 4rem)
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
+      -webkit-clip-path: circle(4rem at 4rem 4rem)
+      clip-path: circle(4rem at 4rem 4rem)
   100%
     transform: rotateY(1turn)
 

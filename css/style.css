@@ -83,7 +83,9 @@ body {
   50% {
     height: 8rem;
     transform: translate(-1rem, -1rem) rotateY(0.5turn);
-    clip-path: circle(4rem at 4rem 4rem); }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(4rem at 4rem 4rem);
+      clip-path: circle(4rem at 4rem 4rem); } }
   100% {
     transform: rotateY(1turn); } }
 
@@ -427,6 +429,7 @@ body {
     background-color: green;
     font-size: 2rem;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all .8s ease;
     border-radius: 5px;
@@ -463,9 +466,11 @@ body {
     background-size: cover;
     height: 23rem;
     background-blend-mode: overlay;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-radius: 5px; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .card__picture {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -526,8 +531,11 @@ body {
         .card__side--back {
           border-bottom-left-radius: 5px;
           border-bottom-right-radius: 5px;
-          transform: rotateY(0);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+          transform: rotateY(0); }
+          @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            .card__side--back {
+              -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); } }
       .card:hover .card__side--front {
         transform: rotateY(0); }
       .card:hover .card__side--back {
@@ -575,11 +583,16 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(42% at 50% 50%);
+    overflow: hidden;
+    border-radius: 100%;
     transform: translateX(-3rem) skewX(12deg); }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .story__shape {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(42% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: 0; } }
     @media (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0); } }
@@ -731,8 +744,11 @@ body {
     border-style: solid;
     border-width: 50px;
     border-radius: 100%;
-    transform: rotate(45deg);
-    clip-path: polygon(0 0, 50px 50px, 0 100px); }
+    transform: rotate(45deg); }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .field-piece::after {
+        -webkit-clip-path: polygon(0 0, 50px 50px, 0 100px);
+        clip-path: polygon(0 0, 50px 50px, 0 100px); } }
     .field-piece::after:hover {
       cursor: pointer; }
 
@@ -742,11 +758,16 @@ body {
   left: 0;
   height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .modal {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3); } }
   .modal__content {
     width: 75%;
     min-height: 30rem;
@@ -985,34 +1006,47 @@ body {
     width: calc(3 * (100% - (3 *4rem)) / 4 + (2 * 4rem)); }
 
 .header {
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1280_720/hero.jpg");
   background-size: cover;
   background-position: top;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  position: relative; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 95vh; } }
   @media (max-width: 56.25em) {
-    .header {
-      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } } }
   @media (max-width: 37.5em) {
-    .header {
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } } }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1920_1080/hero.jpg"); } }
   .header__logo > img {
     height: 6rem;
-    animation: roar 2s ease-out 2s;
-    clip-path: circle(2.5rem at 3rem 3rem); }
+    animation: roar 2s ease-out 2s; }
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      .header__logo > img {
+        -webkit-clip-path: circle(2.5rem at 3rem 3rem);
+        clip-path: circle(2.5rem at 3rem 3rem); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
     .header__logo-box:hover .header__logo {
       height: 6rem;
-      animation: roar 2s ease-out 2s;
-      clip-path: circle(2.5rem at 3rem 3rem); }
+      animation: roar 2s ease-out 2s; }
+      @supports (clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+        .header__logo-box:hover .header__logo {
+          -webkit-clip-path: circle(2.5rem at 3rem 3rem);
+          clip-path: circle(2.5rem at 3rem 3rem); } }
   .header__text-box {
     position: absolute;
     top: 40%;
