@@ -46,6 +46,10 @@
                 </li>
                 <li class="navigation__item">
                     <a href="#" class="navigation__link">
+                        <i class="navigation__icon icon-basic-download"></i>Mod Download</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
                         <i class="navigation__icon icon-basic-book-pen"></i>Walkthrough guide</a>
                 </li>
                 <li class="navigation__item">
@@ -60,7 +64,7 @@
         </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__logo-box">
             <img class="header__logo" src="img/LoA_lion_head_100_97.jpg" alt="logo">
         </div>
@@ -68,10 +72,9 @@
         <div class="header__text-box">
             <h1 class="heading-primary">
                 <div class="heading-primary--main">Legend of Ahssûn</div>
-                <div class="heading-primary--sub">Temple of Awakening</div>
             </h1>
 
-            <a class="button button--white button--animated" href="#">
+            <a href="#modal" class="button button--white button--animated">
                 Discover Legend of Ahssûn
             </a>
 
@@ -159,114 +162,114 @@
           </div>
         </section>
 
-        <!--<section class="section-downloads">-->
-          <!--<div class="u-center-text u-margin-bottom-big">-->
-            <!--<h2 class="heading-secondary">-->
-              <!--All the content for the players-->
-            <!--</h2>-->
-          <!--</div>-->
-          <!--<div class="row">-->
+        <section class="section-downloads">
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">
+              All the content for the players
+            </h2>
+          </div>
+          <div class="row">
 
-            <!--<div class="col-1-of-3 card">-->
-              <!--<div class="card__side card__side&#45;&#45;front">-->
-                <!--<div class="card__picture">-->
-                  <!--&nbsp;-->
-                <!--</div>-->
-                <!--<h4 class="card__heading">-->
-                  <!--<span class="card__heading-span">-->
-                    <!--The Sea Explorer-->
-                  <!--</span>-->
-                <!--</h4>-->
-                <!--<div class="card__details">-->
-                  <!--<ul>-->
-                    <!--<li>3 day tours</li>-->
-                    <!--<li>Up to 30 people</li>-->
-                    <!--<li>2 tour guides</li>-->
-                    <!--<li>Sleep in cozy hotels</li>-->
-                    <!--<li>Difficulty: easy</li>-->
-                  <!--</ul>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="card__side card__side&#45;&#45;back">-->
-                <!--<div class="card__call-to-action">-->
-                  <!--<div class="card__price-box">-->
-                    <!--<p class="card__price-only">Only</p>-->
-                    <!--<p class="card__price-value">297€</p>-->
-                  <!--</div>-->
-                  <!--<a href="#" class="button button&#45;&#45;white">Book now!</a>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
+            <div class="col-1-of-3 card">
+              <div class="card__side card__side--front">
+                <div class="card__picture">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span">
+                    The Sea Explorer
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>3 day tours</li>
+                    <li>Up to 30 people</li>
+                    <li>2 tour guides</li>
+                    <li>Sleep in cozy hotels</li>
+                    <li>Difficulty: easy</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back">
+                <div class="card__call-to-action">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">297€</p>
+                  </div>
+                  <a href="#" class="button button--white">Book now!</a>
+                </div>
+              </div>
+            </div>
 
-            <!--<div class="col-1-of-3 card">&lt;!&ndash;card 2&ndash;&gt;-->
-              <!--<div class="card__side card__side&#45;&#45;front">-->
-                <!--<div class="card__picture">-->
-                  <!--&nbsp;-->
-                <!--</div>-->
-                <!--<h4 class="card__heading">-->
-                  <!--<span class="card__heading-span">-->
-                    <!--The Forest Explorer-->
-                  <!--</span>-->
-                <!--</h4>-->
-                <!--<div class="card__details">-->
-                  <!--<ul>-->
-                    <!--<li>7 day tours</li>-->
-                    <!--<li>Up to 40 people</li>-->
-                    <!--<li>6 tour guides</li>-->
-                    <!--<li>Sleep in provided tents</li>-->
-                    <!--<li>Difficulty: medium</li>-->
-                  <!--</ul>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="card__side card__side&#45;&#45;back">-->
-                <!--<div class="card__call-to-action">-->
-                  <!--<div class="card__price-box">-->
-                    <!--<p class="card__price-only">Only</p>-->
-                    <!--<p class="card__price-value">497€</p>-->
-                  <!--</div>-->
-                  <!--<a href="#" class="button button&#45;&#45;white">Book now!</a>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
+            <div class="col-1-of-3 card"><!--card 2-->
+              <div class="card__side card__side--front">
+                <div class="card__picture">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                  <span class="card__heading-span">
+                    The Forest Explorer
+                  </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>7 day tours</li>
+                    <li>Up to 40 people</li>
+                    <li>6 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: medium</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back">
+                <div class="card__call-to-action">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">497€</p>
+                  </div>
+                  <a href="#" class="button button--white">Book now!</a>
+                </div>
+              </div>
+            </div>
 
-            <!--<div class="col-1-of-3 card">&lt;!&ndash;card 3&ndash;&gt;-->
-              <!--<div class="card__side card__side&#45;&#45;front">-->
-                <!--<div class="card__picture">-->
-                  <!--&nbsp;-->
-                <!--</div>-->
-                <!--<h4 class="card__heading">-->
-                    <!--<span class="card__heading-span">-->
-                      <!--The Snow Explorer-->
-                    <!--</span>-->
-                <!--</h4>-->
-                <!--<div class="card__details">-->
-                  <!--<ul>-->
-                    <!--<li>5 day tours</li>-->
-                    <!--<li>Up to 15 people</li>-->
-                    <!--<li>3 tour guides</li>-->
-                    <!--<li>Sleep in provided tents</li>-->
-                    <!--<li>Difficulty: hard</li>-->
-                  <!--</ul>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="card__side card__side&#45;&#45;back">-->
-                <!--<div class="card__call-to-action">-->
-                  <!--<div class="card__price-box">-->
-                    <!--<p class="card__price-only">Only</p>-->
-                    <!--<p class="card__price-value">697€</p>-->
-                  <!--</div>-->
-                  <!--<a href="#" class="button button&#45;&#45;white">Book now!</a>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div> &lt;!&ndash;.row&ndash;&gt;-->
+            <div class="col-1-of-3 card"><!--card 3-->
+              <div class="card__side card__side--front">
+                <div class="card__picture">
+                  &nbsp;
+                </div>
+                <h4 class="card__heading">
+                    <span class="card__heading-span">
+                      The Snow Explorer
+                    </span>
+                </h4>
+                <div class="card__details">
+                  <ul>
+                    <li>5 day tours</li>
+                    <li>Up to 15 people</li>
+                    <li>3 tour guides</li>
+                    <li>Sleep in provided tents</li>
+                    <li>Difficulty: hard</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card__side card__side--back">
+                <div class="card__call-to-action">
+                  <div class="card__price-box">
+                    <p class="card__price-only">Only</p>
+                    <p class="card__price-value">697€</p>
+                  </div>
+                  <a href="#" class="button button--white">Book now!</a>
+                </div>
+              </div>
+            </div>
+          </div> <!--.row-->
 
-          <!--<div class="u-center-text u-margin-top-big">-->
-            <!--<a href="#" class="button button&#45;&#45;main">-->
-              <!--Discover all of Legend of Ahssûn-->
-            <!--</a>-->
-          <!--</div>-->
-        <!--</section>-->
+          <div class="u-center-text u-margin-top-big">
+            <a href="#" class="button button--main">
+              Discover all of Legend of Ahssûn
+            </a>
+          </div>
+        </section>
 
         <section class="section-stories">
           <div class="background-video">
@@ -310,6 +313,20 @@
               </div>
             </div>
 
+            <div class="story">
+              <figure class="story__shape">
+                <img class="story__img" src="img/anonymous.jpg" alt="Person who played LoA">
+                <figcaption class="story__caption">Lucigoth</figcaption>
+              </figure>
+              <div class="story__text">
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  It's a lot of running around, but its also a lot of fun!
+                </h3>
+                <p>In Legend of Ahssun I test a lot of stuff, on the road I found some quite useful things. If you give me some bugs, I'll give you some stuff.
+                    <br>P.S: I have also some shoes to sell.</p>
+              </div>
+            </div>
+
             <div class="u-center-text u-margin-top-big">
               <a href="#" class="button button--main">
                 Add a mod testemonial
@@ -318,7 +335,7 @@
           </div>
         </section>
 
-        <!--<section class="section__book">
+        <section class="section__book">
           <div class="row">
             <div class="book">
               <form action="/api/book" class="book__form">
@@ -357,7 +374,7 @@
 
                 <div class="form__group u-margin-top-big">
                   <button type="submit" href="#"
-                          class="button button&#45;&#45;quartiary">
+                          class="button button--quartiary">
                     Next step <sup style="vertical-align: top; margin-left:.5rem">&rarr;</sup>
                   </button>
                 </div>
@@ -365,7 +382,7 @@
               </form>
             </div>
           </div>
-        </section>-->
+        </section>
     </main>
 
     <footer class="footer">
@@ -409,6 +426,26 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <a href="#header" class="modal__close">x</a>
+            <div class="modal__left">
+                <img src="img/500_332/Kapitel3_preview.jpg" alt="foto" class="modal__img">
+                <img src="img/500_332/Kapitel6_preview.jpg" alt="foto" class="modal__img">
+            </div>
+            <div class="modal__right">
+                <h2 class="heading-secondary u-margin-bottom-small">Start playing now!</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Lorhatis vitae?</h3>
+                <div class="modal__text">
+                    Some things are working if you type them in english deserunt dolor dolorum ea error harum maiores molestiae provident quaerat, sed tenetur vitae voluptatum.
+                </div>
+                <a href="#" class="button button--main">Try LoA now!</a>
+            </div>
+        </div>
+    </div>
+
+
     <!--
     <div class="example">
       <div class="row">

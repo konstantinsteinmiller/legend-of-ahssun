@@ -9,10 +9,15 @@
 .row
   max-width: $grid-width
   margin: 0 auto
+  @include clearfix
   &:not(:last-of-type)
     margin-bottom: $gutter-vertical
+    @include respond(tab-port)
+      margin-bottom: $gutter-vertical-small
 
-  @include clearfix
+
+  @include respond(tab-port)
+    max-width: 50rem
 
   [class*="col-"]
     float: left
@@ -20,6 +25,11 @@
     text-align: center
     &:not(:last-child)
       margin-right: $gutter-horizontal
+      @include respond(tab-port)
+        margin-right: 0
+        margin-bottom: $gutter-vertical-small
+    @include respond(tab-port)
+      width: 100%!important
 
   .col-1-of-2
     width: calc((100% - #{$gutter-horizontal}) / 2)

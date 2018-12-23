@@ -4,28 +4,37 @@ body
   font-size: $f-default
   line-height: 1.7
   color: $color-grey-dark-2
-  padding: 2rem
+  text-align: left
 
 .heading-primary
   font-family: charmingExpanded
-  color: $color-assun
+  color: $color-ahssun
   white-space: nowrap
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black
   &--main
     //text-transform: uppercase
     font-size: 10rem
     font-weight: 400
-    letter-spacing: 0.6rem
-    animation: moveInTop 2s ease-out
+    letter-spacing: .6rem
+    animation: moveInLeft 2s ease-out
+    @include respond(phone)
+      letter-spacing: .2rem
+      font-size: 9rem
+    @include respond(tab-port)
+      letter-spacing: .3rem
+      font-size: 9rem
 
   &--sub
-    color: $color-assun
+    color: $color-ahssun
     font-size: 2.8rem
     letter-spacing: 0.5rem
     font-weight: 400
     left: 0
     animation: moveInFront 2s ease-out
     margin-bottom: 2rem
+    @include respond(phone)
+      letter-spacing: .2rem
+      font-size: 2rem
 
 .heading-secondary
   font-family: charmingExpanded
@@ -41,6 +50,10 @@ body
   letter-spacing: .2rem
   transition: all .2s
   animation: moveInLeft 1s ease
+  @include respond(tab-port)
+    font-size: 4rem
+  @include respond(phone)
+    font-size: 3.5rem
 
   &:hover
     transform: skewY(2deg) skewX(15deg) scale(1.1)
@@ -53,6 +66,7 @@ body
   text-transform: uppercase
 
 .paragraph
+  text-align: left
   font-size: $f-default
   &:not(:last-child)
     margin-bottom: 3rem
