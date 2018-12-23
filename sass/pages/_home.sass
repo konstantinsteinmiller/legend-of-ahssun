@@ -7,12 +7,15 @@
 
 .section-features
   padding: 20rem 0
-  background-image: linear-gradient(to right bottom, rgba($color-tertiary, 0.5), rgba($color-primary-dark, 0.4)), url(../img/features_background.jpg)
+  background-image: linear-gradient(to right bottom, rgba($color-tertiary, 0.5), rgba($color-primary-dark, 0.4)), url(../img/1280_720/features_background.jpg)
   background-size: cover
   transform: skewY(-7deg)
   margin-top: -10rem
   @include respond(tab-port)
     padding: 10rem 0
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) //2000px
+    background-image: linear-gradient(to right bottom, rgba($color-tertiary, 0.5), rgba($color-primary-dark, 0.4)), url(../img/1920_1080/features_background.jpg)
+
   & > *
     transform: skewY(7deg)
 

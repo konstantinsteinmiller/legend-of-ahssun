@@ -1,6 +1,6 @@
 .header
   height: 95vh
-  background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/hero_1280_720.jpg")
+  background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1280_720/hero.jpg")
   background-size: cover
   background-position: top
   position: relative
@@ -10,12 +10,14 @@
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%)
   @include respond(phone)
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) //2000px
+    background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1920_1080/hero.jpg")
 
-  &__logo
+  &__logo > img
     height: 6rem
     animation: roar 2s ease-out 2s
     clip-path: circle(2.5rem at 3rem 3rem)
-    &-box
+  &__logo-box
       position: absolute
       top: 4rem
       left: 4rem
