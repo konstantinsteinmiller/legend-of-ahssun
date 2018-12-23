@@ -9,9 +9,19 @@
   background-color: rgba($color-white, .6)
   font-size: $f-default
   transform: skewX(-12deg)
+  @include respond(tab-port)
+    width: 100%
+    padding: 4rem
+    padding-left: 6rem
+  @include respond(phone)
+    transform: skewX(0)
+    padding-left: 5rem
+
 
   > *
     transform: skewX(12deg)
+    @include respond(phone)
+      transform: skewX(0)
   &__shape
     width: 15rem
     height: 15rem
@@ -23,7 +33,8 @@
     clip-path: circle(42% at 50% 50%)
     transform: translateX(-3rem) skewX(12deg)
     //filter:  drop-shadow(.2rem .5rem 1rem 2rem $color-black)
-
+    @include respond(phone)
+      transform: translateX(-3rem) skewX(0)
   &__img
     height: 100%
     backface-visibility: hidden

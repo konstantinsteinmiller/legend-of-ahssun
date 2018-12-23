@@ -557,8 +557,20 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 6rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0);
+      padding-left: 5rem; } }
   .story > * {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story > * {
+        transform: skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -568,6 +580,9 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(42% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .story__img {
     height: 100%;
     backface-visibility: hidden;
@@ -658,9 +673,16 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-input {
   display: none; }
+  @media (max-width: 56.25em) {
+    .form__radio-input {
+      width: 100%; } }
 
 .form__radio-input:checked + .form__radio-label .form__radio-button::after {
   opacity: 1; }
@@ -1091,18 +1113,34 @@ body {
   position: relative; }
   @media (max-width: 56.25em) {
     .section-stories {
-      padding: 10rem 0; } }
+      padding: 10rem 0; }
+      .section-stories .row {
+        max-width: 65rem; } }
 
 .section__book {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)), url(../img/1920_1080/Kapitel6.jpg);
   padding: 15rem 0; }
+  @media (max-width: 56.25em) {
+    .section__book {
+      padding: 10rem 0; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/1920_1080/Kapitel6.jpg);
   background-size: cover;
   border-radius: 5px;
-  box-shadow: 0 1.5rem 4rem 1rem rgba(0, 0, 0, 0.3);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem 1rem rgba(0, 0, 0, 0.3); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/1920_1080/Kapitel6.jpg); } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/1920_1080/Kapitel6.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
