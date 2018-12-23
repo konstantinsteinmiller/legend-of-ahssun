@@ -17,12 +17,12 @@ body
     font-weight: 400
     letter-spacing: .6rem
     animation: moveInLeft 2s ease-out
-    @include respond(phone)
-      letter-spacing: .2rem
-      font-size: 9rem
     @include respond(tab-port)
       letter-spacing: .3rem
       font-size: 9rem
+    @include respond(phone)
+      letter-spacing: .2rem
+      font-size: 7rem
 
   &--sub
     color: $color-ahssun

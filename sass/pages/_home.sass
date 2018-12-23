@@ -2,6 +2,8 @@
   background-color: $color-grey-light-1
   padding: 25rem 0
   margin-top: -20vh
+  @include respond(tab-port)
+    padding: 20rem 0
 
 .section-features
   padding: 20rem 0
@@ -9,18 +11,23 @@
   background-size: cover
   transform: skewY(-7deg)
   margin-top: -10rem
-
+  @include respond(tab-port)
+    padding: 10rem 0
   & > *
     transform: skewY(7deg)
 
 .section-downloads
   background-color: $color-grey-light-1
-  padding: 25rem 0 50rem 0
+  padding: 25rem 0 10rem 0
   margin-top: -10rem
+  @include respond(tab-port)
+    padding: 15rem 0
   
 .section-stories
   padding: 15rem 0
   position: relative
+  @include respond(tab-port)
+    padding: 10rem 0
 
 .section__book
   background-image: linear-gradient(to right bottom, rgba($color-quartiary-light, 0.9), rgba($color-quartiary-dark, 0.9)), url(../img/1920_1080/Kapitel6.jpg)
