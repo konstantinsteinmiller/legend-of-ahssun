@@ -1,0 +1,17 @@
+/*resources/a-charming-font.regular.ttf*/
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: charming;
+    src: url("fonts/a-charming-font.regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: charmingExpanded;
+    src: url("fonts/a-charming-font.superexpanded.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
