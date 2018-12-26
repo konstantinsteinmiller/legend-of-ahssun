@@ -1,71 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="css/icon-font.css">-->
-    <!--<link rel="stylesheet" href="css/linea-icons.css">-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="img/Favicon.jpg">
+  <link rel="stylesheet" href="css/icon-font.css">
+  <link rel="stylesheet" href="css/linea-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/Favicon.jpg">
+  <script type="application/javascript" src="js/main.js"></script>
 
-    <title>LoA</title>
+  <title>LoA</title>
 </head>
 <body>
-    <!--<div class="field">
-        <div class="field-piece"></div>
+  <!--<div class="field">
+      <div class="field-piece"></div>
 
-        <a href="#" class="button__shift-box bar">
-            BAR
-        </a>
-    </div>-->
-    <!--videos by coverr-->
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__burger-icon">&nbsp;</span>
-        </label>
-        <div class="navigation__background">&nbsp;</div>
+      <a href="#" class="button__shift-box bar">
+          BAR
+      </a>
+  </div>-->
+  <!--videos by coverr-->
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__burger-icon">&nbsp;</span>
+    </label>
+    <div class="navigation__background">&nbsp;</div>
+    <!--<label for="navi-toggle" style="width: 100vw; height: 100vh; display: inline-block;">-->
 
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-home"></i>Home</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-world"></i>About Legend of Ahssûn</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-star"></i>Features</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-picture"></i>Gallery</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-download"></i>Mod Download</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-book-pen"></i>Walkthrough guide</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-heart"></i>The team</a>
-                </li>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link">
-                        <i class="navigation__icon icon-basic-archive-full"></i>Credits</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#header" class="navigation__link">
+            <i class="navigation__icon icon-basic-home"></i>
+            Home</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#about" class="navigation__link">
+            <i class="navigation__icon icon-basic-world"></i>
+            About Legend of Ahssûn</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#features" class="navigation__link">
+            <i class="navigation__icon icon-basic-star"></i>
+            Features</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="image-gallery.html" class="navigation__link">
+            <i class="navigation__icon icon-basic-picture"></i>
+            Gallery</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#download" class="navigation__link">
+            <i class="navigation__icon icon-basic-download"></i>
+            Mod Download</a>
+        </li>
+        <li class="navigation__item">
+            <a tabindex="0"
+               onclick="closeNavigation()"
+               href="walkthrough.html" class="navigation__link">
+              <i class="navigation__icon icon-basic-book-pen"></i>
+              Walkthrough guide</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#team" class="navigation__link">
+            <i class="navigation__icon icon-basic-heart"></i>
+            The team</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#credits" class="navigation__link">
+            <i class="navigation__icon icon-basic-archive-full"></i>
+            Credits</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
     <header class="header" id="header">
         <div class="header__logo-box">
@@ -91,7 +117,7 @@
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="about">
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
               A Look on the beauty of Legend of Ahssûn
@@ -118,24 +144,30 @@
             </div>
             <div class="col-1-of-2">
               <div class="composition">
-                <img srcset="img/500_332/Kapitel2_preview.jpg 300w, img/500_332/Kapitel2_preview.jpg 1000w"
-                     sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
-                     src="img/500_332/Kapitel2_preview.jpg"
-                     class="composition__photo composition__photo--p1" alt="Image 1">
-                <img srcset="img/500_332/Kapitel3_preview.jpg 300w, img/500_332/Kapitel3_preview.jpg 1000w"
-                     sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
-                     src="img/500_332/Kapitel3_preview.jpg"
-                     class="composition__photo composition__photo--p2" alt="Image 2">
-                <img srcset="img/500_332/Kapitel6_preview.jpg 300w, img/500_332/Kapitel6_preview.jpg 1000w"
-                     sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
-                     src="img/500_332/Kapitel6_preview.jpg"
-                     class="composition__photo composition__photo--p3" alt="Image 3">
+                <a href="image-gallery.html">
+                  <img srcset="img/500_332/Kapitel2_preview.jpg 300w, img/500_332/Kapitel2_preview.jpg 1000w"
+                       sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                       src="img/500_332/Kapitel2_preview.jpg"
+                       class="composition__photo composition__photo--p1" alt="Image 1">
+                </a>
+                <a href="image-gallery.html">
+                  <img srcset="img/500_332/Kapitel3_preview.jpg 300w, img/500_332/Kapitel3_preview.jpg 1000w"
+                       sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                       src="img/500_332/Kapitel3_preview.jpg"
+                       class="composition__photo composition__photo--p2" alt="Image 2">
+                </a>
+                <a href="image-gallery.html">
+                  <img srcset="img/500_332/Kapitel6_preview.jpg 300w, img/500_332/Kapitel6_preview.jpg 1000w"
+                       sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                       src="img/500_332/Kapitel6_preview.jpg"
+                       class="composition__photo composition__photo--p3" alt="Image 3">
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section-features">
+        <section class="section-features" id="features">
 
           <div class="row">
             <div class="col-1-of-4">
@@ -180,10 +212,10 @@
           </div>
         </section>
 
-        <section class="section-downloads">
+        <section class="section-downloads" id="download">
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
-              All the content for the players
+              Download the game
             </h2>
           </div>
           <div class="row">
@@ -289,7 +321,7 @@
           </div>
         </section>
 
-        <section class="section-stories">
+        <section class="section-stories" id="team">
           <div class="background-video">
             <video class="background-video__content" autoplay muted loop>
               <source src="./img/background_firerain.mp4" type="video/mp4">
@@ -353,7 +385,7 @@
           </div>
         </section>
 
-        <section class="section__book">
+        <!--<section class="section__book">
           <div class="row">
             <div class="book">
               <form action="/api/book" class="book__form">
@@ -392,7 +424,7 @@
 
                 <div class="form__group u-margin-top-big">
                   <button type="submit" href="#"
-                          class="button button--quartiary">
+                          class="button button&#45;&#45;quartiary">
                     Next step <sup style="vertical-align: top; margin-left:.5rem">&rarr;</sup>
                   </button>
                 </div>
@@ -400,7 +432,7 @@
               </form>
             </div>
           </div>
-        </section>
+        </section>-->
     </main>
 
     <footer class="footer">
@@ -440,7 +472,7 @@
                                     height="20"
                                     width="20"
                                     src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"> by
-                    <a href="" class="footer__link">Konstantin Steinmiller</a>
+                    <a href="https://www.xing.com/profile/Konstantin_Steinmiller/cv" class="footer__link">Konstantin Steinmiller</a>
                     for the <a
                         href="https://forum.worldofplayers.de/forum/threads/1376495-Release-Legend-of-Ahss%C3%BBn-Demo"
                         class="footer__link">Legend of Ahssûn&copy; Release @2018</a>
