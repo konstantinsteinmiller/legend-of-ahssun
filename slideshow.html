@@ -9,7 +9,6 @@
     html, body {
       height: 100%
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -18,12 +17,10 @@
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
     }
-
     /* custom fonts */
     .clear {
       clear: both;
     }
-
     a:link, a:visited, a:hover {
       color: #ddd;
     }
@@ -47,7 +44,6 @@
       -ms-interpolation-mode: bicubic;
     }
 
-    /* special IE fix for resized images */
     #preloader {
       position: absolute;
       z-index: 2;
@@ -92,7 +88,6 @@
       background: url(img/empty.gif);
     }
 
-    /* fucking IE needs a background value to understand hover area */
     #customScrollBox {
       position: relative;
       overflow: hidden;
@@ -139,6 +134,7 @@
       margin: 0 0 1px 1px;
       display: block;
       float: left;
+      border: 1px solid #FFCC66;
     }
 
     #customScrollBox img {
@@ -149,10 +145,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 145px;
+      width: 150px;
       height: 100%;
       background: url(img/sw_thumb_selected.png) no-repeat;
       display: none;
+      background-size: cover;
     }
 
     #dragger_container {
@@ -226,6 +223,8 @@
     -->
   </style>
   <link rel="stylesheet" href="css/icon-font.css">
+  <link rel="stylesheet" href="css/linea-icons.css">
+  <link rel="stylesheet" href="css/style-slideshow.css">
   <!--<link rel="stylesheet" href="css/style.css">-->
   <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
   <script type="text/javascript" src="js/vendor/jquery-ui.min.js"></script>
@@ -234,23 +233,248 @@
 </head>
 
 <body>
+<div class="navigation">
+  <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+  <label for="navi-toggle" class="navigation__button">
+    <span class="navigation__burger-icon">&nbsp;</span>
+  </label>
+  <div class="navigation__background">&nbsp;</div>
+
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-home"></i>Home</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-world"></i>About Legend of Ahssûn</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-star"></i>Features</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-picture"></i>Gallery</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-download"></i>Mod Download</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-book-pen"></i>Walkthrough guide</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-heart"></i>The team</a>
+      </li>
+      <li class="navigation__item">
+        <a href="#" class="navigation__link">
+          <i class="navigation__icon icon-basic-archive-full"></i>Credits</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 <div id="outer_container">
   <div id="customScrollBox">
     <div class="container">
       <div class="content">
-        <h1 class="heading-primary">LoA Image Gallery</h1>
+        <h1 class="heading-primary">Image Gallery</h1>
+
         <div id="toolbar"></div>
         <div class="clear"></div>
         <a href="img/1920_1080/Burgruine.jpg" class="thumb_link">
           <span class="selected"></span>
-          <img src="./img/200_200/Burgruine.jpg"
-               title="Burgruine" alt="Burgruine"
+          <img src="./img/150_84/Burgruine.jpg"
+               title="Burgruine im Ödland" alt="Burgruine"
                class="thumb"/>
         </a>
         <a href="img/1920_1080/OV_1.jpg" class="thumb_link">
           <span class="selected"></span>
-          <img src="./img/200_200/OV_1.jpg"
-               title="Oberes Viertel" alt="Burgruine"
+          <img src="./img/150_84/OV_1.jpg"
+               title="Upper Quarter" alt="Upper Quarter"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/Harbor_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/Harbor_1.jpg"
+               title="Harbor" alt="Harbor"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/GrapesFarm.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/GrapesFarm.jpg"
+               title="Grapes farm" alt="Grapes farm"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/Strand.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/Strand.jpg"
+               title="Beach" alt="Beach"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/beach_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/beach_1.jpg"
+               title="Beach" alt="Beach"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/beach_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/beach_2.jpg"
+               title="Beach" alt="Beach"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/BL_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/BL_1.jpg"
+               title="Bandits camp" alt="Bandits camp"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/BL_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/BL_2.jpg"
+               title="Bandits camp" alt="Bandits camp"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/BL_3.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/BL_3.jpg"
+               title="Bandits camp" alt="Bandits camp"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/camp_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/camp_1.jpg"
+               title="Camp" alt="Camp"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/camp_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/camp_2.jpg"
+               title="Camp" alt="Camp"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/desert_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/desert_1.jpg"
+               title="Desert" alt="Desert"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/desert_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/desert_2.jpg"
+               title="Desert" alt="Desert"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/desert_3.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/desert_3.jpg"
+               title="Desert" alt="Desert"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/farm_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/farm_1.jpg"
+               title="Farm" alt="Farm"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/GM_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/GM_1.jpg"
+               title="Goldmine" alt="Goldmine"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/GM_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/GM_2.jpg"
+               title="Goldmine" alt="Goldmine"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/JL_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/JL_1.jpg"
+               title="Garvs camp" alt="Garvs camp"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/Kaserne.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/Kaserne.jpg"
+               title="Barracks" alt="barracks"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/KL_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/KL_1.jpg"
+               title="Monastery" alt="Monastery"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/KL_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/KL_2.jpg"
+               title="Monastery" alt="Monastery"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/main_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/main_1.jpg"
+               title="Hauptwelt" alt="Hauptwelt"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/OH_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/OH_1.jpg"
+               title="Orins Farm" alt="Orins Farm"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/ST_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/ST_1.jpg"
+               title="Swamp Temple" alt="Swamp Temple"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/ToA_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/ToA_1.jpg"
+               title="Temple of Awakening" alt="Temple of Awakening"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/town_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/town_1.jpg"
+               title="Town" alt="Town"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/town_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/town_2.jpg"
+               title="Town" alt="Town"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/town_3.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/town_3.jpg"
+               title="Town" alt="Town"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/town_4.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/town_4.jpg"
+               title="Town" alt="Town"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/UM_1.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/UM_1.jpg"
+               title="Surroundings" alt="Surroundings"
+               class="thumb"/>
+        </a>
+        <a href="img/1920_1080/UV_2.jpg" class="thumb_link">
+          <span class="selected"></span>
+          <img src="./img/150_84/UV_2.jpg"
+               title="Surroundings" alt="Surroundings"
                class="thumb"/>
         </a>
         <p class="clear"></p>
