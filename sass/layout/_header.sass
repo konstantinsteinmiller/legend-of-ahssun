@@ -1,23 +1,23 @@
 .header
-  height: 85vh
+  height: 45vh
   background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1280_720/hero.jpg")
   background-size: cover
   background-position: top
   position: relative
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh)
+    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh)
     height: 95vh
 
   @include respond(tab-port)
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%)
-      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%)
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 60vh)
+      clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 60vh)
   @include respond(phone)
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) //2000px
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh)
+      clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh)
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) //2000px
     background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1920_1080/hero.jpg")
 
   &__logo > img
@@ -30,15 +30,12 @@
       position: absolute
       top: 4rem
       left: 4rem
-      &:hover .header__logo
+      &:hover .header__logo > img
         height: 6rem
         animation: roar 2s ease-out 2s
-        @supports (clip-path: polygon(0 0)) or (clip-path: polygon(0 0))
-          -webkit-clip-path: circle(2.5rem at 3rem 3rem)
-          clip-path: circle(2.5rem at 3rem 3rem)
   &__text-box
     position: absolute
-    top: 40%
+    top: 25%
     left: 50%
     transform: translate(-50%, -50%)
     text-align: center

@@ -1,0 +1,26 @@
+.gallery
+  &-item
+    overflow: hidden
+    float: left
+    width: 14.5rem
+    height: 14.5rem
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)
+    margin-right: 1rem
+    &:hover
+      cursor: pointer
+    > img
+      //padding: .5rem
+      background-color: transparent
+      width: 14.5rem
+      height: 14.5rem
+    &:first-child
+      margin-left: 15rem
+
+    &-big
+      width: 29.75rem
+      height: 29.75rem
+      > img
+        width: 29.75rem
+        height: 29.75rem
+        //margin-left: -7rem
+        //margin-top: -7rem

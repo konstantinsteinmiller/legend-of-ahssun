@@ -10,7 +10,6 @@
     left: 0
     top: 0
     background-color: green
-    //color: black
     font-size: 2rem
     width: 100%
     -webkit-backface-visibility: hidden
@@ -58,7 +57,7 @@
       background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark)
 
 
-  //Front type styling
+  //Front side styling
   &__picture
     background-size: cover
     height: 23rem
@@ -121,7 +120,7 @@
 
 
 
-  @include respond(tab-port)
+  @media only screen and (max-width: 56.25em), only screen and (hover: none)
     height: auto
     border-radius: $border-radius
     background-color: $color-white

@@ -1,0 +1,36 @@
+.section-gallery
+  background-color: $color-grey-light-1
+  //padding: 5rem 0
+  .row:not(:last-of-type)
+    margin: 0
+    [class*="col-"]
+      padding: .5rem
+      &:not(:last-child)
+        margin: 0
+  .row
+    &:first-child, &:last-child
+      margin-left: 4.5rem
+    &:nth-child(2), &:nth-child(4)
+      margin-left: 15rem
+      > *:last-child
+        margin-left: 15rem
+      .gallery-item:first-child
+        margin-top: -3.5rem
+        margin-left: 8rem
+      .gallery-item:last-child
+        margin-top: -3.5rem
+        margin-left: 29.5rem
+    //&:last-child
+
+    &:nth-child(3)
+      //margin-left: -7.5rem
+      > .gallery-item:first-child
+        margin-left: -7rem
+        margin-top: -10.75rem
+      > .gallery-item:nth-child(2)
+        margin-left: 14.25rem
+        margin-top: -10.75rem
+      > .gallery-item:last-child
+        margin-left: 14.25rem
+        margin-top: -10.75rem
+
