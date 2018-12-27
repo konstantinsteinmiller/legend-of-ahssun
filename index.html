@@ -29,7 +29,6 @@
         <span class="navigation__burger-icon">&nbsp;</span>
     </label>
     <div class="navigation__background">&nbsp;</div>
-    <!--<label for="navi-toggle" style="width: 100vw; height: 100vh; display: inline-block;">-->
 
     <nav class="navigation__nav">
       <ul class="navigation__list">
@@ -60,6 +59,12 @@
              href="image-gallery.html" class="navigation__link">
             <i class="navigation__icon icon-basic-picture"></i>
             Gallery</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0" onclick="closeNavigation()"
+             href="media.html#section-media" class="navigation__link">
+            <i class="navigation__icon icon-basic-video"></i>
+            Videos and Audio</a>
         </li>
         <li class="navigation__item">
           <a tabindex="0"
@@ -140,7 +145,17 @@
             Lorem ipsum dolor sit amet. Distinctio ipsum iusto labore nisi praesentium reiciendis totam voluptatum. Consequuntur expedita fuga inventore maxime mollitia perspiciatis praesentium quod reprehenderit voluptas!
           </p>
 
-          <a href="#" class="button-text">Go to the image gallery &rarr;</a>
+          <!--<a href="image-gallery.html" class="button-text">Go to the image gallery &rarr;</a>-->
+          <!--<a href="#" class="button-text">Go to video and sound samples &rarr;</a>-->
+          <div class="u-center-text u-margin-top-big">
+            <a href="image-gallery.html" class="button button--main">
+              Go to the image gallery &rarr;
+            </a>
+          </div><div class="u-center-text u-margin-top-big">
+            <a href="media.html#section-media" class="button button--main">
+              Watch Videos &rarr;
+            </a>
+          </div>
         </div>
         <div class="col-1-of-2">
           <div class="composition">
@@ -162,63 +177,15 @@
                    src="img/500_332/Kapitel6_preview.jpg"
                    class="composition__photo composition__photo--p3" alt="Image 3">
             </a>
+            <a href="media.html#section-media">
+              <img srcset="img/500_332/intro.jpg 300w, img/500_332/intro.jpg 1000w"
+                   sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                   src="img/500_332/intro.jpg"
+                   class="composition__photo composition__photo--p4" alt="Image 4">
+            </a>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section-media">
-      <div class="u-center-text u-margin-bottom-big">
-        <h2 class="heading-secondary">
-          Videos and sound samples
-        </h2>
-      </div>
-
-      <div class="media-cube">
-        <ul class="m">
-          <li class="m1 li" tabindex="1">
-            <img src="https://img.youtube.com/vi/5nTkpFPXouo/3.jpg" alt="side 1">
-          </li>
-          <li class="m2 li" tabindex="2">
-            <img src="img/400_400/GrapesFarm.jpg" alt="side 2">
-          </li>
-          <li class="m3 li" tabindex="3">
-            <img src="img/400_400/Harbor_1.jpg" alt="side 3">
-          </li>
-          <li class="m4 li" tabindex="4">
-            <img src="img/400_400/Strand.jpg" alt="side 4">
-          </li>
-          <li class="m5 li" tabindex="5">
-            <img src="img/400_400/OV_1.jpg" alt="side 5">
-          </li>
-          <li class="m6 li" tabindex="6">
-            <img src="https://img.youtube.com/vi/5EA0iUoXObA/3.jpg" alt="side 6">
-          </li>
-          <li class="cube-wrap">
-            <div class="cube">
-              <div class="front">
-                <iframe src="https://www.youtube.com/embed/5nTkpFPXouo"></iframe>
-              </div>
-              <div class="right">
-                <img src="img/400_400/GrapesFarm.jpg" alt="side 2">
-              </div>
-              <div class="top">
-                <img src="img/400_400/Harbor_1.jpg" alt="side 3">
-              </div>
-              <div class="left">
-                <img src="img/400_400/Strand.jpg" alt="side 4">
-              </div>
-              <div class="bottom">
-                <img src="img/400_400/OV_1.jpg" alt="side 5">
-              </div>
-              <div class="back">
-                <iframe src="https://www.youtube.com/embed/5EA0iUoXObA"></iframe>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
     </section>
 
     <section class="section-features" id="features">
@@ -367,12 +334,6 @@
           </div>
         </div>
       </div>--> <!--.row-->
-
-      <div class="u-center-text u-margin-top-big">
-        <a href="#" class="button button--main">
-          Discover all of Legend of Ahssûn
-        </a>
-      </div>
     </section>
 
     <section class="section-stories" id="team">
@@ -555,7 +516,7 @@
       </div>
   </footer>
 
-  <div class="modal" id="modal">
+  <!--<div class="modal" id="modal">
       <div class="modal__content">
           <a href="#header" class="modal__close">x</a>
           <div class="modal__left">
@@ -568,10 +529,10 @@
               <div class="modal__text">
                   Some things are working if you type them in english deserunt dolor dolorum ea error harum maiores molestiae provident quaerat, sed tenetur vitae voluptatum.
               </div>
-              <a href="#" class="button button--main">Try LoA now!</a>
+              <a href="#" class="button button&#45;&#45;main">Try LoA now!</a>
           </div>
       </div>
-  </div>
+  </div>-->
 
 
   <!--

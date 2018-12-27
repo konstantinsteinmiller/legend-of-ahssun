@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/icon-font.css">
+  <link rel="stylesheet" href="css/linea-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/Favicon.jpg">
+  <script type="application/javascript" src="js/main.js"></script>
+
+  <title>LoA</title>
+</head>
+<body>
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">
+      <span class="navigation__burger-icon">&nbsp;</span>
+    </label>
+    <div class="navigation__background">&nbsp;</div>
+    <!--<label for="navi-toggle" style="width: 100vw; height: 100vh; display: inline-block;">-->
+
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#header" class="navigation__link">
+            <i class="navigation__icon icon-basic-home"></i>
+            Home</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#about" class="navigation__link">
+            <i class="navigation__icon icon-basic-world"></i>
+            About Legend of Ahssûn</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#features" class="navigation__link">
+            <i class="navigation__icon icon-basic-star"></i>
+            Features</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="image-gallery.html" class="navigation__link">
+            <i class="navigation__icon icon-basic-picture"></i>
+            Gallery</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0" onclick="closeNavigation()"
+             href="media.html#section-media" class="navigation__link">
+            <i class="navigation__icon icon-basic-video"></i>
+            Videos and Audio</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#download" class="navigation__link">
+            <i class="navigation__icon icon-basic-download"></i>
+            Mod Download</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="walkthrough.html" class="navigation__link">
+            <i class="navigation__icon icon-basic-book-pen"></i>
+            Walkthrough guide</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#team" class="navigation__link">
+            <i class="navigation__icon icon-basic-heart"></i>
+            The team</a>
+        </li>
+        <li class="navigation__item">
+          <a tabindex="0"
+             onclick="closeNavigation()"
+             href="index.html#credits" class="navigation__link">
+            <i class="navigation__icon icon-basic-archive-full"></i>
+            Credits</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <header class="header" id="header">
+      <div class="header__logo-box">
+          <picture class="header__logo">
+              <source srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
+                      media="(max-width: 37.5em)">
+              <img alt="logo"
+                   srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
+                   src="img/LoA_lion_head_1x.jpg">
+          </picture>
+      </div>
+
+      <div class="header__text-box">
+          <h1 class="heading-primary">
+              <div class="heading-primary--main">Legend of Ahssûn</div>
+          </h1>
+
+          <a href="#modal" class="button button--white button--animated">
+              Discover Legend of Ahssûn
+          </a>
+
+      </div>
+  </header>
+
+  <main>
+    <section class="section-media" id="section-media">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Videos and sound samples
+        </h2>
+      </div>
+
+      <div class="media-cube">
+        <ul class="m">
+          <li class="m1 li" tabindex="1">
+            <img src="https://img.youtube.com/vi/5nTkpFPXouo/3.jpg" alt="side 1">
+          </li>
+          <li class="m2 li" tabindex="2">
+            <img src="https://img.youtube.com/vi/5B2K0gmKAuI/2.jpg" alt="side 2">
+          </li>
+          <li class="m3 li" tabindex="3">
+            <img src="https://img.youtube.com/vi/N1EGaHxpRKA/2.jpg" alt="side 3">
+          </li>
+          <li class="m4 li" tabindex="4">
+            <img src="https://img.youtube.com/vi/jTCrjMPeuXU/1.jpg" alt="side 3">
+          </li>
+          <li class="m5 li" tabindex="5">
+            <i class="icon icon-music-note-multiple"></i>
+          </li>
+          <li class="m6 li" tabindex="6">
+            <img src="https://img.youtube.com/vi/5EA0iUoXObA/3.jpg" alt="side 6">
+          </li>
+          <li class="cube-wrap">
+            <div class="cube">
+              <div class="front">
+                <iframe src="https://www.youtube.com/embed/5nTkpFPXouo"></iframe>
+              </div>
+              <div class="right">
+                <iframe src="https://www.youtube.com/embed/5B2K0gmKAuI"></iframe>
+              </div>
+              <div class="top">
+                <iframe src="https://www.youtube.com/embed/N1EGaHxpRKA"></iframe>
+              </div>
+              <div class="left">
+                <iframe src="https://www.youtube.com/embed/jTCrjMPeuXU"></iframe>
+              </div>
+              <div class="bottom">
+                <div class="plane">
+                  <h3 class="u-center-text u-margin-bottom-big">
+                    Sound quality samples 1
+                    <audio controls>
+                      <source src="static/audio/LoA_Sprachdemo_1.ogg" type="audio/ogg">
+                      <source src="static/audio/LoA_Sprachdemo_1.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </h3>
+
+                  <h3 class="u-center-text">
+                    Sound quality samples 1
+                    <audio controls>
+                      <source src="static/audio/LoA_Sprachdemo_2.ogg" type="audio/ogg">
+                      <source src="static/audio/LoA_Sprachdemo_2.mp3" type="audio/mpeg">
+                    </audio>
+                  </h3>
+                </div>
+              </div>
+              <div class="back">
+                <iframe src="https://www.youtube.com/embed/5EA0iUoXObA"></iframe>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <picture class="footer__logo">
+        <source srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
+                media="(max-width: 37.5em)">
+        <img alt="Full logo"
+             srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
+             src="img/LoA_lion_head_1x.jpg">
+      </picture>
+    </div>
+    <div class="row">
+          <div class="col-1-of-2">
+              <div class="footer__navigation">
+                  <ul class="footer__list">
+                      <li class="footer__item">
+                          <a href="#" class="footer__link">LoA team</a></li>
+                      <li class="footer__item">
+                          <a href="#" class="footer__link">Contact us</a></li>
+                      <li class="footer__item">
+                          <a href="#" class="footer__link">Support us</a></li>
+                      <li class="footer__item">
+                          <a href="#" class="footer__link">Credits</a></li>
+                      <li class="footer__item">
+                          <a href="#" class="footer__link">Privacy policy</a></li>
+                      <li class="footer__item">
+                          <a href="#" class="footer__link">Terms</a></li>
+                      </ul>
+              </div>
+          </div>
+          <div class="col-1-of-2">
+              <p class="footer__copyright">
+                  Build with <img class="footer__heart"
+                                  style="vertical-align: sub;"
+                                  alt="heart"
+                                  height="20"
+                                  width="20"
+                                  src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"> by
+                  <a target="_blank" href="https://www.xing.com/profile/Konstantin_Steinmiller/cv" class="footer__link">Konstantin Steinmiller</a>
+                  for the <a target="_blank"
+                      href="https://forum.worldofplayers.de/forum/threads/1531973-RELEASE-Legend-of-Ahss%C3%BBn"
+                      class="footer__link">Legend of Ahssûn&copy; Release @2018</a>
+                  Copyright &copy; You are allowed to use this webdesing for commercial and private purpose. A credit to
+                  the original author, Konstantin Steinmiller, is appreciated.
+              </p>
+          </div>
+      </div>
+  </footer>
+
+  <!--
+  <div class="example">
+    <div class="row">
+      <div class="col-1-of-2">1-of-2</div>
+      <div class="col-1-of-2">1-of-2</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-3">1-of-3</div>
+      <div class="col-1-of-3">1-of-3</div>
+      <div class="col-1-of-3">1-of-3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-3">1-of-3</div>
+      <div class="col-2-of-3">2-of-3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-4">1-of-4</div>
+      <div class="col-1-of-4">1-of-4</div>
+      <div class="col-1-of-4">1-of-4</div>
+      <div class="col-1-of-4">1-of-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-4">1-of-4</div>
+      <div class="col-1-of-4">1-of-4</div>
+      <div class="col-2-of-4">2-of-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1-of-4">1-of-4</div>
+      <div class="col-3-of-4">3-of-4</div>
+    </div>
+  </div>
+  -->
+
+  <!--<div class="aspect">
+    <div class="content"></div>
+  </div>-->
+</body>
+</html>

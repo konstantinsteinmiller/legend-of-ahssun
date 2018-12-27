@@ -1,15 +1,29 @@
 .section-about
   background-color: $color-grey-light-1
-  padding: 20rem 0 10rem 0
+  padding: 20rem 0 20rem 0
   margin-top: -50vh
   @include respond(tab-port)
     padding: 10rem 0
 
 .section-media
   background-color: $color-grey-light-1
-  padding: 2rem 0 20rem 0
+  padding: 20rem 0 0 0
+  margin-top: -42rem
+  //padding: 2rem 0 20rem 0
   //@include respond(tab-port)
   //  padding: 5rem 0
+  .media-cube
+    .m5
+      background-color: transparent
+      width: 10rem
+      height: 10rem
+      text-align: center
+      padding: 1rem
+      > i
+        font-size: 5rem
+        color: $color-black
+    .cube .bottom .plane > h3:first-child
+      margin-top: 12rem
 
 .section-features
   padding: 20rem 0

@@ -12,9 +12,9 @@
 
 }
 
-[data-icon]:before {
+[class^="icon-basic-"]:before,
+[class*="icon-basic-"]:before {
   font-family: "linea-basic-10" !important;
-  content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -25,9 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "linea-basic-10" !important;
+@font-face {
+  font-family: "linea-music-10";
+  src:url("fonts/linea-music-10.eot");
+  src:url("fonts/linea-music-10.eot?#iefix") format("embedded-opentype"),
+  url("fonts/linea-music-10.woff") format("woff"),
+  url("fonts/linea-music-10.ttf") format("truetype"),
+  url("fonts/linea-music-10.svg#linea-music-10") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[class^="icon-music-"]:before,
+[class*="icon-music-"]:before {
+  font-family: "linea-music-10" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -305,12 +317,6 @@
 .icon-basic-pin2:before {
   content: "`";
 }
-.icon-basic-postcard:before {
-  content: "{";
-}
-.icon-basic-postcard-multiple:before {
-  content: "|";
-}
 .icon-basic-printer:before {
   content: "}";
 }
@@ -374,14 +380,8 @@
 .icon-basic-spread-text:before {
   content: "\e011";
 }
-.icon-basic-spread-text-bookmark:before {
-  content: "\e012";
-}
 .icon-basic-star:before {
   content: "\e013";
-}
-.icon-basic-tablet:before {
-  content: "\e014";
 }
 .icon-basic-target:before {
   content: "\e015";
@@ -398,29 +398,11 @@
 .icon-basic-todo-txt:before {
   content: "\e019";
 }
-.icon-basic-todolist-pen:before {
-  content: "\e01a";
-}
-.icon-basic-todolist-pencil:before {
-  content: "\e01b";
-}
 .icon-basic-trashcan:before {
   content: "\e01c";
 }
-.icon-basic-trashcan-full:before {
-  content: "\e01d";
-}
-.icon-basic-trashcan-refresh:before {
-  content: "\e01e";
-}
-.icon-basic-trashcan-remove:before {
-  content: "\e01f";
-}
 .icon-basic-upload:before {
   content: "\e020";
-}
-.icon-basic-usb:before {
-  content: "\e021";
 }
 .icon-basic-video:before {
   content: "\e022";
@@ -431,11 +413,8 @@
 .icon-basic-webpage:before {
   content: "\e024";
 }
-.icon-basic-webpage-img-txt:before {
-  content: "\e025";
-}
-.icon-basic-webpage-multiple:before {
-  content: "\e026";
+.icon-music-note-multiple:before {
+  content: "o";
 }
 .icon-basic-webpage-txt:before {
   content: "\e027";
