@@ -388,8 +388,8 @@ body {
       top: 21rem; }
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p4 {
-          top: 1rem;
-          left: 0;
+          top: -2rem;
+          right: 35%;
           transform: scale(1.1); } }
     .composition__photo:hover {
       outline-offset: 1rem;
