@@ -1,5 +1,6 @@
 li {
   list-style: none; }
+
 html {
   /* defines what 1rem is */
   font-size: 62.5%; }
@@ -1120,11 +1121,11 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
-  margin-top: -20vh; }
+  padding: 20rem 0;
+  margin-top: -50vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 10rem 0; } }
 
 .section-features {
   padding: 20rem 0;
@@ -1225,6 +1226,3 @@ body {
       transform: translateY(-35.25rem); }
     .section-gallery .row:nth-child(5) {
       transform: translateY(-42.5rem); }
-
-.footer {
-  margin-top: 70rem; }
