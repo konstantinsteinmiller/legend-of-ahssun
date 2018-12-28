@@ -20,6 +20,23 @@
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) //2000px
     background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1920_1080/hero.jpg")
 
+  &__language-picker
+    position: absolute
+    top: .5rem
+    right: 1rem
+    color: $color-white
+  &__locale
+    &--selected
+      color: $color-primary-dark
+    &--de, &--en
+      padding: .2rem 1rem
+      &:hover
+        cursor: pointer
+        background-color: rgba($color-grey-dark-4, .5)
+        color: $color-primary
+    &--de
+      border-right: 1px solid $color-white
+
   &__logo > img
     height: 6rem
     animation: roar 2s ease-out 2s

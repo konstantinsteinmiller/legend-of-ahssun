@@ -14,7 +14,7 @@
 
   <title>LoA</title>
 </head>
-<body>
+<body onload="onLoad()">
   <!--<div class="field">
       <div class="field-piece"></div>
 
@@ -99,26 +99,32 @@
   </div>
 
   <header class="header" id="header">
-      <div class="header__logo-box">
-          <picture class="header__logo">
-              <source srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
-                      media="(max-width: 37.5em)">
-              <img alt="logo"
-                   srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
-                   src="img/LoA_lion_head_1x.jpg">
-          </picture>
-      </div>
+    <div class="header__language-picker">
+      <span class="header__locale header__locale--de"
+            onclick="setLanguage('de')">DE</span>
+      <span class="header__locale header__locale--en"
+            onclick="setLanguage('en')">EN</span>
+    </div>
+    <div class="header__logo-box">
+      <picture class="header__logo">
+        <source srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
+                media="(max-width: 37.5em)">
+        <img alt="logo"
+             srcset="img/LoA_lion_head_1x.jpg 1x, img/LoA_lion_head_2x.jpg 2x"
+             src="img/LoA_lion_head_1x.jpg">
+      </picture>
+    </div>
 
-      <div class="header__text-box">
-          <h1 class="heading-primary">
-              <div class="heading-primary--main">Legend of Ahssûn</div>
-          </h1>
+    <div class="header__text-box">
+      <h1 class="heading-primary">
+          <div class="heading-primary--main">Legend of Ahssûn</div>
+      </h1>
 
-          <a href="#modal" class="button button--white button--animated">
-              Discover Legend of Ahssûn
-          </a>
+      <a href="#modal" class="button button--white button--animated">
+          Discover Legend of Ahssûn
+      </a>
 
-      </div>
+    </div>
   </header>
 
   <main>
@@ -208,9 +214,20 @@
         <div class="col-1-of-4">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-world"></i>
-            <h3 class="heading-tertiary u-margin-bottom-small">Explore Ahssûn</h3>
-            <p class="feature-box__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur,
+            <h3 class="heading-tertiary u-margin-bottom-small"
+                data-de="Entdecke Ahssûn">
+              Explore Ahssûn
+            </h3>
+            <p class="feature-box__text"
+               data-de="Eine gewaltige und atemberaubend schöne Welt mit verschiedenen Klimazonen.<br>
+                Neue Monster, Tiere, Animationen, Interagierbare Objekte, professionelle Musikstücke.<br>
+                und haufenweise neue 3D Modelle"
+               data-en="
+                A tremendous and amazingly beautiful world with
+                distinct climat zones.<br>
+                New monsters, animals, animations, interactable objects,
+                professional music.<br>
+                and a whole bunch of new 3D models.">
             </p>
           </div>
         </div>
@@ -218,9 +235,25 @@
         <div class="col-1-of-4">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-compass"></i>
-            <h3 class="heading-tertiary u-margin-bottom-small">Explore Ahssûn</h3>
-            <p class="feature-box__text">
-              Lorem ipsum. Architecto aspernatur,
+            <h3 class="heading-tertiary u-margin-bottom-small"
+                data-de="Fertikeitenentwicklung">
+              Skill developement
+            </h3>
+            <p class="feature-box__text"
+               data-de="Das learning-by-doing System für Waffentalente erweitert
+                      das aus G2 bekannte Lernsystem der Lehrer.<br>
+                      2 neue Berufe. Berufe haben mehr Einfluss auf die Spielweise
+                      und bringen einzigartige Vorteile.<br>
+                      Neue tragbare Items wie Armreife und Helme<br>
+                      Multiloge (mehr als 2 Gesprächsteilnehmer)<br>
+                      3 wählbare Gilden."
+               data-en="The learning by doing system for weapon skills expands the already known
+                        System from the original game.<br>
+                        2 new professions. Professions have a higher impact on your play style
+                        grant unique advantages.<br>
+                        New wearable items like bracelets and helmets.<br>
+                        Multilogues (more than 2 participants).<br>
+                        <b>3 choosable guilds</b>">
             </p>
           </div>
         </div>
@@ -228,9 +261,27 @@
         <div class="col-1-of-4">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-map"></i>
-            <h3 class="heading-tertiary u-margin-bottom-small">Explore Ahssûn</h3>
-            <p class="feature-box__text">
-              Lorem ipsum dolor sit amet. Architecto aspernatur,
+            <h3 class="heading-tertiary u-margin-bottom-small"
+                data-de="Neue Fertigkeiten">New skills</h3>
+            <p class="feature-box__text"
+               data-de="Schärfen von Klingenwaffen.<br>
+                       Mehrpfeile-System mit 5 verschiedenen Pfeiltypen<br>
+                       Neue Zauber<br>
+                       Neue Art der Teleportation<br>
+                       Spruchrollenschreiben<br>
+                       Runen auflösen<br>
+                       Schleichangriff<br>
+                       Gifte<br>
+                       Klimaeinflüsse<br>"
+               data-en="Sharpening of blade weapons<br>
+                        Multi arrow system with 5 distinct arrow types<br>
+                        New magic spells<br>
+                        New way of teleportation<br>
+                        Crafting of spells<br>
+                        Destructuring of runes<br>
+                        Sneak attack<br>
+                        Poison<br>
+                        Climat impacts<br>">
             </p>
           </div>
         </div>
@@ -238,9 +289,19 @@
         <div class="col-1-of-4">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-heart"></i>
-            <h3 class="heading-tertiary u-margin-bottom-small">Love for Ahssûn</h3>
-            <p class="feature-box__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur,
+            <h3 class="heading-tertiary u-margin-bottom-small"
+                data-de="Umfang">
+              Boundries
+            </h3>
+            <p class="feature-box__text"
+              data-de="<b>254 neue Quests</b> - einige Gildenabhängig<br>
+                      <b>80-150 Stunden</b> Spielzeit<br>
+                      <b>45000</b> professionel eingesprochene Dialoge<br>
+                      Eine Menge Eastereggs"
+               data-en="<b>254 new Quests</b> - some are guild specific
+                        <b>80-150 hours</b> of gameplay
+                        <b>45000</b> professionally spoken dialog takes. (double the amount of Gothic 2 NotR)
+                        A lot of Eastereggs">
             </p>
           </div>
         </div>

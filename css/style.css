@@ -409,6 +409,7 @@ body {
   padding: 2.5rem;
   text-align: center;
   border-radius: .3rem;
+  word-break: break-word;
   box-shadow: 0 1.5rem 4rem 1rem rgba(0, 0, 0, 0.3);
   transition: transform .3s; }
   @media only screen and (max-width: 56.25em) {
@@ -1168,6 +1169,21 @@ body {
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1920_1080/hero.jpg"); } }
+  .header__language-picker {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    color: white; }
+  .header__locale--selected {
+    color: #CFB53B; }
+  .header__locale--de, .header__locale--en {
+    padding: .2rem 1rem; }
+    .header__locale--de:hover, .header__locale--en:hover {
+      cursor: pointer;
+      background-color: rgba(51, 51, 51, 0.5);
+      color: #FFCC66; }
+  .header__locale--de {
+    border-right: 1px solid white; }
   .header__logo > img {
     height: 6rem;
     animation: roar 2s ease-out 2s; }
