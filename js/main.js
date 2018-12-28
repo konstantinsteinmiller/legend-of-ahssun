@@ -14,15 +14,23 @@ function setLanguage(locale) {
     const translation = node.dataset[locale];
     node.innerHTML = translation;
   });
+  const queries = location.search ? location.search.split('=') : [];
+  const newQueries = queries.map(q => {
+    return (q === 'de' || q === 'en')? locale : q;
+  }).join('=');
+  if (newQueries !== location.search) location.search = newQueries;
+  localStorage.lang = locale;
 }
 
 function onLoad() {
   const queries = location.search ? location.search.split('=') : [];
-  const lang = queries.filter((q) => q === 'de' || q === 'en').pop();
-
-  if (lang === 'de') {
-    setLanguage('de')
-  } else {
+  const lang = queries.filter(q => q === 'de' || q === 'en').pop();
+  const storedLocale = lang ? lang : localStorage.lang
+  if (lang === 'en') {
     setLanguage('en')
+  } else if (storedLocale){
+    setLanguage(storedLocale)
+  } else {
+    setLanguage('de')
   }
 }
