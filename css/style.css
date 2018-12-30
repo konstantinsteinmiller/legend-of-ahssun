@@ -268,8 +268,8 @@ body {
   color: #777; }
 
 .button--main {
-  background-color: #FFDF00;
-  color: white; }
+  background-color: #f5e13e;
+  color: #777; }
   .button--main::after {
     background-color: #FFDF00; }
 
@@ -1170,7 +1170,7 @@ body {
       .header {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh);
         clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 60vh); } } }
-  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 112.5em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(27, 101, 213, 0.5), rgba(180, 115, 38, 0.51)), url("../img/1920_1080/hero.jpg"); } }
   .header__language-picker {
@@ -1211,12 +1211,12 @@ body {
 
 .footer {
   background-color: #333;
-  padding: 10rem 0;
+  padding: 5rem 0 10rem 0;
   font-size: 1.4rem;
   color: #bbb; }
   @media only screen and (max-width: 56.25em) {
     .footer {
-      padding: 8rem 0; } }
+      padding: 5rem 0 8rem 0; } }
   .footer__logo-box {
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
@@ -1318,13 +1318,47 @@ body {
       padding: 15rem 0; } }
 
 .section-stories {
-  padding: 15rem 0;
+  padding: 20rem 0;
   position: relative; }
   @media only screen and (max-width: 56.25em) {
     .section-stories {
-      padding: 10rem 0; }
+      padding: 12rem 0; }
       .section-stories .row {
         max-width: 80%; } }
+  .section-stories__cutter {
+    height: 0;
+    width: 100%;
+    position: relative; }
+    .section-stories__cutter::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0; }
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        .section-stories__cutter::after {
+          background-color: #f7f7f7;
+          -webkit-clip-path: polygon(0 -1%, 100% -1%, 0% 100%, 0 -1%);
+          clip-path: polygon(0 -1%, 100% -1%, 0% 100%, 0 -1%);
+          height: 16rem;
+          width: 100%; }
+          @media only screen and (max-width: 56.25em) {
+            .section-stories__cutter::after {
+              margin-bottom: 6rem;
+              height: 10rem; } } }
+    .section-stories__cutter-bottom::after {
+      color: white; }
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        .section-stories__cutter-bottom::after {
+          margin-top: -16rem;
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%, 100% 0);
+          clip-path: polygon(100% 0, 100% 101%, 0% 101%, 100% 0); }
+          @media only screen and (max-width: 56.25em) {
+            .section-stories__cutter-bottom::after {
+              margin-bottom: 0;
+              margin-top: -10rem; } } }
+
+.section-credits {
+  background-color: #f7f7f7; }
 
 .section__book {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)), url(../img/1920_1080/Kapitel6.jpg);
