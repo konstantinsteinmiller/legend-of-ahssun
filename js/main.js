@@ -34,3 +34,14 @@ function onLoad() {
     setLanguage('de')
   }
 }
+
+function downloadImage(event, img) {
+  const link = document.createElement('a');
+  link.href = img;
+  link.download = img.split('/').pop();
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  event.stopPropagation();
+  event.preventDefault();
+}

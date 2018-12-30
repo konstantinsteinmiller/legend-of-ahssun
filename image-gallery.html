@@ -3,6 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="shortcut icon" type="image/png" href="img/Favicon.jpg">
+  <link rel="stylesheet" href="css/icon-font.css">
+  <link rel="stylesheet" href="css/linea-icons.css">
   <style type="text/css">
     <!--
     html, body {
@@ -136,6 +139,37 @@
       border: 1px solid #FFCC66;
     }
 
+    #customScrollBox a.thumb_link .download {
+      font-family: "linea-basic-10" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    #customScrollBox a.thumb_link:hover > .download::after {
+      opacity: 1;
+      z-index: 5;
+    }
+
+    #customScrollBox a.thumb_link > .download::after {
+      content: "F";
+      position: absolute;
+      bottom: .5rem;
+      right: .5rem;
+      background-color: rgba(150, 150, 150, .4);
+      width: 2.2rem;
+      height: 1.6rem;
+      border-radius: .5rem;
+      font-size: 2.2rem;
+      padding: .8rem;
+      opacity: 0;
+    }
+
     #customScrollBox img {
       border: none;
     }
@@ -221,9 +255,7 @@
     }
     -->
   </style>
-  <link rel="shortcut icon" type="image/png" href="img/Favicon.jpg">
-  <link rel="stylesheet" href="css/icon-font.css">
-  <link rel="stylesheet" href="css/linea-icons.css">
+
   <link rel="stylesheet" href="css/style-slideshow.css">
   <!--<link rel="stylesheet" href="css/style.css">-->
   <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
@@ -356,192 +388,256 @@
             <img src="./img/150_84/Burgruine.jpg"
                  title="Burgruine im Ödland" alt="Burgruine"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/Burgruine.jpg')"></div>
           </a>
           <a href="img/1920_1080/OV_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/OV_1.jpg"
                  title="Upper Quarter" alt="Upper Quarter"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/OV_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/Harbor_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/Harbor_1.jpg"
                  title="Harbor" alt="Harbor"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/Harbor_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/GrapesFarm.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/GrapesFarm.jpg"
                  title="Grapes farm" alt="Grapes farm"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/GrapesFarm.jpg')"></div>
           </a>
           <a href="img/1920_1080/Strand.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/Strand.jpg"
                  title="Beach" alt="Beach"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/Strand.jpg')"></div>
           </a>
           <a href="img/1920_1080/beach_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/beach_1.jpg"
                  title="Beach" alt="Beach"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/beach_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/beach_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/beach_2.jpg"
                  title="Beach" alt="Beach"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/beach_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/BL_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/BL_1.jpg"
                  title="Bandits camp" alt="Bandits camp"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/BL_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/BL_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/BL_2.jpg"
                  title="Bandits camp" alt="Bandits camp"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/BL_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/BL_3.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/BL_3.jpg"
                  title="Bandits camp" alt="Bandits camp"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/BL_3.jpg')"></div>
           </a>
           <a href="img/1920_1080/camp_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/camp_1.jpg"
                  title="Camp" alt="Camp"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/camp_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/camp_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/camp_2.jpg"
                  title="Camp" alt="Camp"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/camp_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/desert_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/desert_1.jpg"
                  title="Desert" alt="Desert"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/desert_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/desert_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/desert_2.jpg"
                  title="Desert" alt="Desert"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/desert_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/desert_3.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/desert_3.jpg"
                  title="Desert" alt="Desert"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/desert_3.jpg')"></div>
           </a>
           <a href="img/1920_1080/farm_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/farm_1.jpg"
                  title="Farm" alt="Farm"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/farm_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/GM_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/GM_1.jpg"
                  title="Goldmine" alt="Goldmine"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/GM_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/GM_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/GM_2.jpg"
                  title="Goldmine" alt="Goldmine"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/GM_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/JL_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/JL_1.jpg"
                  title="Garvs camp" alt="Garvs camp"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/JL_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/Kaserne.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/Kaserne.jpg"
                  title="Barracks" alt="barracks"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/Kaserne.jpg')"></div>
           </a>
           <a href="img/1920_1080/KL_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/KL_1.jpg"
                  title="Monastery" alt="Monastery"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/KL_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/KL_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/KL_2.jpg"
                  title="Monastery" alt="Monastery"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/KL_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/main_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/main_1.jpg"
                  title="Hauptwelt" alt="Hauptwelt"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/main_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/OH_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/OH_1.jpg"
                  title="Orins Farm" alt="Orins Farm"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/OH_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/ST_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/ST_1.jpg"
                  title="Swamp Temple" alt="Swamp Temple"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/ST_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/ToA_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/ToA_1.jpg"
                  title="Temple of Awakening" alt="Temple of Awakening"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/ToA_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/town_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/town_1.jpg"
                  title="Town" alt="Town"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/town_1.jpg')"></div>
           </a>
           <a href="img/1920_1080/town_2.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/town_2.jpg"
                  title="Town" alt="Town"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/town_2.jpg')"></div>
           </a>
           <a href="img/1920_1080/town_3.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/town_3.jpg"
                  title="Town" alt="Town"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/town_3.jpg')"></div>
           </a>
           <a href="img/1920_1080/town_4.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/town_4.jpg"
                  title="Town" alt="Town"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/town_4.jpg')"></div>
           </a>
           <a href="img/1920_1080/UM_1.jpg" class="thumb_link">
             <span class="selected"></span>
             <img src="./img/150_84/UM_1.jpg"
                  title="Surroundings" alt="Surroundings"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/UM_1.jpg')"></div>
           </a>
-          <a href="img/1920_1080/UV_2.jpg" class="thumb_link">
+          <a href="img/1920_1080/UM_2.jpg" class="thumb_link">
             <span class="selected"></span>
-            <img src="./img/150_84/UV_2.jpg"
+            <img src="./img/150_84/UM_2.jpg"
                  title="Surroundings" alt="Surroundings"
                  class="thumb"/>
+            <div class="download"
+                 onclick="downloadImage(event, './img/original/UM_2.jpg')"></div>
           </a>
           <p class="clear"></p>
         </div>
