@@ -232,7 +232,7 @@
   <script type="text/javascript" src="js/vendor/jquery.mousewheel.min.js"></script>
   <script type="application/javascript" src="js/main.js"></script>
 
-  <title>Image gallery</title>
+  <title data-de="Bilder Gallery" data-en="Image gallery">Bilder Gallery</title>
 </head>
 
 <body>
@@ -874,12 +874,15 @@
     FullScreenBackground($bgimg); //scale bg image
     //re-style button
     if (theMode == "full") {
-      $toolbar.html("<span class='lightgrey' data-de='BILDER ANSICHTS MODUS' data-en='IMAGE VIEW MODE'>IMAGE VIEW MODE &rsaquo;</span> FULL");
+      $toolbar.html("<span class='lightgrey' data-de='BILDER ANSICHTS MODUS &rsaquo; FÜLLEN' data-en='IMAGE VIEW MODE &rsaquo; FULL'>BILDER ANSICHTS MODUS &rsaquo; FULL</span>");
     } else if (theMode == "fit") {
-      $toolbar.html("<span class='lightgrey' data-de='BILDER ANSICHTS MODUS' data-en='IMAGE VIEW MODE'>IMAGE VIEW MODE &rsaquo;</span> FIT");
+      $toolbar.html("<span class='lightgrey' data-de='BILDER ANSICHTS MODUS &rsaquo; ANPASSEN' data-en='IMAGE VIEW MODE &rsaquo; FIT'>BILDER ANSICHTS MODUS &rsaquo; FIT</span>");
     } else {
-      $toolbar.html("<span class='lightgrey' data-de='BILDER ANSICHTS MODUS' data-en='IMAGE VIEW MODE'>IMAGE VIEW MODE &rsaquo;</span> ORIGINAL");
+      $toolbar.html("<span class='lightgrey' data-de='BILDER ANSICHTS MODUS &rsaquo; ORIGINAL' data-en='IMAGE VIEW MODE &rsaquo; ORIGINAL'>BILDER ANSICHTS MODUS &rsaquo; ORIGINAL</span>");
     }
+    setTimeout(function () {
+      onLoad()
+    }, 200)
   }
 
   //preload script images
