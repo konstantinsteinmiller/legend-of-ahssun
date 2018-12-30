@@ -47,6 +47,7 @@ body
   letter-spacing: .2rem
   transition: all .2s
   animation: moveInLeft 1s ease
+  position: relative
   @include respond(tab-port)
     font-size: 4rem
   @include respond(phone)
@@ -55,6 +56,7 @@ body
   &:hover
     transform: skewY(2deg) skewX(15deg) scale(1.1)
     text-shadow: .5rem 1rem 2rem rgba(darken($color-primary-dark, 20%), 0.3)
+
 
 .heading-tertiary
   text-align: left
