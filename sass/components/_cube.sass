@@ -11,6 +11,11 @@
     //box-shadow: -1rem 0 0 #D6D6D6
     @include clearfix
 
+    @include respond(tab-port)
+      clear: both
+      width: auto
+      float: none
+
     .li
       display: block
       width:  10rem
@@ -46,6 +51,14 @@
     top: 0
     right: 40rem
     perspective: 100rem
+    @include respond(tab-port)
+      position: absolute
+      float: right
+      top: 18rem
+      left: 0
+      transform: translateX(10%)
+    @include respond(phone)
+      top: 27rem
 
   .cube
     width:  50rem
