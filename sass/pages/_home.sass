@@ -86,15 +86,27 @@
   background-color: $color-grey-light-1
   padding: 5rem 0 10rem 0
   .row
-    margin-bottom: 1rem
-    &:not(:last-child)
-      border-bottom: 1px solid #e6e6e0
+    margin-bottom: 2rem
   @include respond(tab-port)
     margin-bottom: 0
     margin-top: -10rem
     padding: 5rem 0 10rem 0
     .row [class*="col-"]
       margin-bottom: 0
+  .feature-box__text > li:not(:last-child)
+    border-bottom: 1px solid $color-grey-light-1
+
+  .row
+    @include respond(tab-port)
+      max-width: 100%
+    //padding: 0 3rem
+    [class*="col-"]
+      @include respond(tab-port)
+        width: 50%!important
+      @include respond(phone)
+        width: 100%!important
+    &:nth-child(2) > .col-1-of-4:nth-child(3)
+      float: right
 
 .section__book
   background-image: linear-gradient(to right bottom, rgba($color-quartiary-light, 0.9), rgba($color-quartiary-dark, 0.9)), url(../img/1920_1080/Kapitel6.jpg)

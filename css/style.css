@@ -1147,6 +1147,12 @@ body {
     width: calc((100% - (2 *4rem)) / 3); }
   .row .col-1-of-4 {
     width: calc((100% - (3 *4rem)) / 4); }
+    @media only screen and (max-width: 56.25em) {
+      .row .col-1-of-4 {
+        width: calc((100% - 4rem) / 2); } }
+    @media only screen and (max-width: 37.5em) {
+      .row .col-1-of-4 {
+        width: 100%; } }
   .row .col-2-of-3 {
     width: calc(2 * (100% - (2 *4rem)) / 3 + 4rem); }
   .row .col-2-of-4 {
@@ -1366,9 +1372,7 @@ body {
   background-color: #f7f7f7;
   padding: 5rem 0 10rem 0; }
   .section-credits .row {
-    margin-bottom: 1rem; }
-    .section-credits .row:not(:last-child) {
-      border-bottom: 1px solid #e6e6e0; }
+    margin-bottom: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .section-credits {
       margin-bottom: 0;
@@ -1376,6 +1380,19 @@ body {
       padding: 5rem 0 10rem 0; }
       .section-credits .row [class*="col-"] {
         margin-bottom: 0; } }
+  .section-credits .feature-box__text > li:not(:last-child) {
+    border-bottom: 1px solid #f7f7f7; }
+  @media only screen and (max-width: 56.25em) {
+    .section-credits .row {
+      max-width: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    .section-credits .row [class*="col-"] {
+      width: 50% !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-credits .row [class*="col-"] {
+      width: 100% !important; } }
+  .section-credits .row:nth-child(2) > .col-1-of-4:nth-child(3) {
+    float: right; }
 
 .section__book {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)), url(../img/1920_1080/Kapitel6.jpg);
