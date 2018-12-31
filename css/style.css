@@ -1391,8 +1391,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .section-credits .row [class*="col-"] {
       width: 100% !important; } }
-  .section-credits .row:nth-child(2) > .col-1-of-4:nth-child(3) {
-    float: right; }
+  @media only screen and (max-width: 56.25em) {
+    .section-credits .row:nth-child(2) > .col-1-of-4:nth-child(3) {
+      float: right; } }
 
 .section__book {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)), url(../img/1920_1080/Kapitel6.jpg);

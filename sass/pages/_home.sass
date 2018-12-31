@@ -9,9 +9,6 @@
   background-color: $color-grey-light-1
   padding: 20rem 0 0 0
   margin-top: -42rem
-  //padding: 2rem 0 20rem 0
-  //@include respond(tab-port)
-  //  padding: 5rem 0
   .media-cube
     .m5
       background-color: transparent
@@ -105,8 +102,10 @@
         width: 50%!important
       @include respond(phone)
         width: 100%!important
-    &:nth-child(2) > .col-1-of-4:nth-child(3)
-      float: right
+
+    @include respond(tab-port)
+      &:nth-child(2) > .col-1-of-4:nth-child(3)
+        float: right
 
 .section__book
   background-image: linear-gradient(to right bottom, rgba($color-quartiary-light, 0.9), rgba($color-quartiary-dark, 0.9)), url(../img/1920_1080/Kapitel6.jpg)
