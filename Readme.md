@@ -37,7 +37,7 @@ Sass, js, jQuery
 ##A view
 ![About Image](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/about.png "About")
 ![Flip cards](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/flip-cards.png "Flip cards")
-![Repsonsive flip card](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/repsonsive-flip-card.png "Repsonsive flip card")
+![Responsive flip card](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/responsive-flip-card.png "Responsive flip card")
 ![Image gallery](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/image-gallery-1.png "Image gallery")
 ![Image gallery](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/image-gallery-2.png "Image gallery")
 ![Media gallery](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/media-gallery.png "Media gallery")
