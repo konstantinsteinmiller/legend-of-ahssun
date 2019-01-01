@@ -45,5 +45,5 @@ Sass, js, jQuery, node-sass with post-css and liveserver
 ![Features](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/features.png "Features")
 ![Team](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/team.png "Team")
 
-### Aknowlegement
+### Acknowledgement
 Original slideshow by malihu from http://manos.malihu.gr/sideways-jquery-fullscreen-image-gallery/2/
