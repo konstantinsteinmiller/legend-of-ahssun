@@ -4,7 +4,7 @@ The official LoA website: [http://legendofahssun.worldofgothic.com](http://legen
 This is the code for the official Legend of Ahssun website.
 Legend of Ahssûn is a total conversion mod for Gothic 2, a medieval fantasy RPG from Essen in Germany.
 
-##The webpage
+## The webpage
 The Webpage offers a modern look of a one pager with a heavy focus und CSS transition, animations and a 3d design.
 Aside from an about section, it offers feature cards, flippable feature cards (here for used for the download section)
 and teams section, where a smooth background video animates the viewer to enjoy the reading.<br>
@@ -18,7 +18,7 @@ The image gallery gives a big overview of the available images with detailed vie
 Furthermore the image previewer is able to be adjusted to fit, fullscreen or just display the original image.
 All images can be downloaded in the original format and quality which is often 1920x1080 pixels.
 
-##Design, structure & features
+## Design, structure & features
 Fully responsive desktop-first webpage with an image 
 gallery and a video gallery implemented 
 with an css tranformed cube<br>
@@ -31,10 +31,10 @@ hard work.<br>
 It uses as few Javascript as possible by design.<br>
 No CSS and no JS Framework was used by choice!
 
-##Toolchain
+## Toolchain
 Sass, js, jQuery
 
-##A view
+## A view
 ![About Image](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/about.png "About")
 ![Flip cards](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/flip-cards.png "Flip cards")
 ![Responsive flip card](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/responsive-flip-card.png "Responsive flip card")
