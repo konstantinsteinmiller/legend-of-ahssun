@@ -32,7 +32,7 @@ It uses as few Javascript as possible by design.<br>
 No CSS and no JS Framework was used by choice!
 
 ## Toolchain
-Sass, js, jQuery
+Sass, js, jQuery, node-sass with post-css and liveserver
 
 ## A view
 ![About Image](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/about.png "About")
@@ -46,3 +46,4 @@ Sass, js, jQuery
 ![Team](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/team.png "Team")
 
 ### Aknowlegement
+Original slideshow by malihu from http://manos.malihu.gr/sideways-jquery-fullscreen-image-gallery/2/
