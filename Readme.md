@@ -44,3 +44,5 @@ Sass, js, jQuery
 ![Navigation](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/navigation.png "Navigation")
 ![Features](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/features.png "Features")
 ![Team](https://github.com/konstantinsteinmiller/legend-of-ahssun/raw/master/doc/team.png "Team")
+
+### Aknowlegement
