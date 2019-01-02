@@ -20,7 +20,6 @@
     "compress-walkthrough:css": "node-sass css/walkthrough.prefix.css css/walkthrough.css --output-style compressed",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
     "build-walkthrough:css": "npm-run-all compile-walkthrough:sass concat-walkthrough:css prefix-walkthrough:css compress-walkthrough:css"
-
   },
   "author": "Konstantin Steinmiller",
   "license": "MIT",
