@@ -2,11 +2,11 @@ The official LoA website: [http://legendofahssun.worldofgothic.com](http://legen
 
 
 ## Todos:
-- Google analytics
 - SEO
 - Testemonials
 - Theming
 - walkthrough guide
+- Vor / Zurück button Bildergallerie und Tastatureingabe
 
 ## about
 This is the code for the official Legend of Ahssun website.

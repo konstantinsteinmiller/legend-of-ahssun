@@ -1,0 +1,80 @@
+.notification
+  max-width: 40rem
+  background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8))
+  position: fixed
+  bottom: 3rem
+  right: 3rem
+  z-index: 999
+  border-radius: $border-radius
+  box-shadow: 0 1rem 3rem rgba($color-black, .25)
+  text-align: center
+  cursor: pointer
+  padding: 2rem
+  color: $color-white
+  &__text
+    display: inline-block
+  &__never-ask
+    position: relative
+    display: inline-block
+    margin-top: 1rem
+    padding-right: 3rem
+
+  &__donation
+    background-color: $color-grey-light-2
+    margin-left: 1rem
+    &:link,
+    &:visited
+      padding: .5rem 1.5rem
+      color: $color-tertiary
+  &__checkbox
+    position: absolute
+    right: 0
+    top: 0
+    &-checked
+      position: absolute
+      right: .8rem
+      top: 0
+      font-size: 2rem
+      line-height: 2rem
+      color: $color-black
+    &::after
+      content: ''
+      display: inline-block
+      top: 0
+      right: 0
+      float: right
+      width: 2.5rem
+      height: 2.5rem
+      margin-left: 1rem
+      background-color: lightgrey
+      border-radius: $border-radius
+      border: 2px solid $color-grey-light-3
+  &__input
+    display: none
+    &::after
+      content: ''
+      display: inline-block
+      top: -2rem
+      right: 0
+      float: right
+      width: 1.5rem
+      height: 1.5rem
+      margin-left: 1rem
+      background-color: green
+      border-radius: $border-radius
+      border: 2px solid $color-grey-dark-2
+
+  &__close
+    line-height: 1rem
+    padding: .5rem
+    text-align: right
+    &:link, &:visited
+      color: $color-white
+      position: absolute
+      top: 1rem
+      right: 1rem
+      font-size: 2rem
+      text-decoration: none
+      display: inline-block
+    &:hover
+      color: $color-black

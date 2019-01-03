@@ -45,3 +45,13 @@ function downloadImage(event, img) {
   event.stopPropagation();
   event.preventDefault();
 }
+
+function closeNotification(event) {
+  const $notification = event.target.parentNode
+  console.log('$notification', $notification)
+}
+
+function toggleNeverShowNotification(event) {
+  const $notification = event.target.parentNode
+  console.log( event)
+}

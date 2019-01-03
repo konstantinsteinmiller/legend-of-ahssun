@@ -33,6 +33,29 @@
       </a>
   </div>-->
   <!--videos by coverr-->
+  <div class="notification">
+    <a href="#header" class="notification__close" onclick="closeNotification()">x</a>
+    <div class="notification__text"
+    data-de="Wenn du LoA liebst, unterstütze uns doch durch eine
+            <a class='button notification__donation' href='index.html#modal'>Spende</a>"
+    data-en="If you love LoA, support us with a
+            <a class='button notification__donation' href='index.html#modal'>donation</a>">
+      If you love LoA, support us with a
+      <a class='button notification__donation' href="index.html#modal">donation</a>
+    </div>
+    <div class="notification__never-ask">
+      <div data-de="Diese Nachricht nie wieder anzeigen"
+           data-en="Never show this message again">
+        Diese Nachricht nie wieder anzeigen
+      </div>
+      <span class="notification__checkbox">
+        <span class="notification__checkbox-checked">x</span>
+        <input class="notification__input" type='checkbox' value='false'
+               onchange='toggleNeverShowNotification()'></span>
+
+    </div>
+  </div>
+
   <div class="navigation">
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="navigation__button">
@@ -1342,7 +1365,7 @@
                    data-de="Kontaktiert uns"
                    data-en="Contact us">Kontaktiert uns</a></li>
             <li class="footer__item">
-                <a href="#" class="footer__link"
+                <a href="index.html#modal" class="footer__link"
                    data-de="Unterstützt uns"
                    data-en="Support us">Unterstützt uns</a></li>
             <li class="footer__item">
@@ -1387,23 +1410,42 @@
     </div>
   </footer>
 
-  <!--<div class="modal" id="modal">
-      <div class="modal__content">
-          <a href="#header" class="modal__close">x</a>
-          <div class="modal__left">
-              <img src="img/500_332/Kapitel3_preview.jpg" alt="foto" class="modal__img">
-              <img src="img/500_332/Kapitel6_preview.jpg" alt="foto" class="modal__img">
-          </div>
-          <div class="modal__right">
-              <h2 class="heading-secondary u-margin-bottom-small">Start playing now!</h2>
-              <h3 class="heading-tertiary u-margin-bottom-small">Lorhatis vitae?</h3>
-              <div class="modal__text">
-                  Some things are working if you type them in english deserunt dolor dolorum ea error harum maiores molestiae provident quaerat, sed tenetur vitae voluptatum.
-              </div>
-              <a href="#" class="button button&#45;&#45;main">Try LoA now!</a>
-          </div>
+  <div class="modal" id="modal">
+    <div class="modal__content">
+      <a href="#header" class="modal__close">x</a>
+      <div class="modal__donations">
+        <h3 class="heading-tertiary u-margin-bottom-small">
+          Du möchtest das LoA Team unterstützen?
+        </h3>
+        <p class="modal__text"
+            data-de="Dann spende in unseren Money Pool bei PayPal
+          oder werde mein Patron bei Patreon."
+            data-en="Then support us with a donation on our money pool on PayPal or become a patron on my patreon page">
+          Dann spende in unseren Money Pool bei PayPal
+          oder werde mein Patron bei Patreon.
+        </p>
+        <p class="modal__links">
+
+          <a class="button modal__paypal" href="https://www.paypal.com/pools/c/8b2aypXkOK" target="_blank">PayPal</a>
+
+          <a class="button modal__patreon" href="https://www.patreon.com/user?u=16196980" target="_blank">PATREON</a>
+
+        </p>
       </div>
-  </div>-->
+      <!--<div class="modal__left">-->
+          <!--<img src="img/500_332/Kapitel3_preview.jpg" alt="foto" class="modal__img">-->
+          <!--<img src="img/500_332/Kapitel6_preview.jpg" alt="foto" class="modal__img">-->
+      <!--</div>-->
+      <!--<div class="modal__right">-->
+          <!--<h2 class="heading-secondary u-margin-bottom-small">Start playing now!</h2>-->
+          <!--<h3 class="heading-tertiary u-margin-bottom-small">Lorhatis vitae?</h3>-->
+          <!--<div class="modal__text">-->
+              <!--Some things are working if you type them in english deserunt dolor dolorum ea error harum maiores molestiae provident quaerat, sed tenetur vitae voluptatum.-->
+          <!--</div>-->
+          <!--<a href="#" class="button button&#45;&#45;main">Try LoA now!</a>-->
+      <!--</div>-->
+    </div>
+  </div>
 
 
   <!--
