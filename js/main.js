@@ -62,4 +62,4 @@ function toggleNeverShowNotification(event) {
   console.log( event)
 }
 
-setTimeout(function () { showNotification( true) }, 20000);
+// setTimeout(function () { showNotification( true) }, 20000);
