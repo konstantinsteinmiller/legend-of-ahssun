@@ -1035,7 +1035,10 @@ body {
   text-align: center;
   cursor: pointer;
   padding: 2rem;
-  color: white; }
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s; }
   .notification__text {
     display: inline-block; }
   .notification__never-ask {
@@ -1099,7 +1102,7 @@ body {
       text-decoration: none;
       display: inline-block; }
     .notification__close:hover {
-      color: black; }
+      color: #bf191c; }
 
 .navigation__checkbox {
   display: none; }

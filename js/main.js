@@ -46,12 +46,20 @@ function downloadImage(event, img) {
   event.preventDefault();
 }
 
-function closeNotification(event) {
-  const $notification = event.target.parentNode
+function showNotification(event, show) {
+  const $notification = document.querySelector('.notification');
   console.log('$notification', $notification)
+  if (show === false) {
+    $notification.parentNode.removeChild($notification)
+  } else {
+    $notification.style.opacity = "1";
+    $notification.style.visibility = "visible";
+  }
 }
 
 function toggleNeverShowNotification(event) {
   const $notification = event.target.parentNode
   console.log( event)
 }
+
+setTimeout(function () { showNotification( true) }, 20000);
