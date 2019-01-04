@@ -643,7 +643,7 @@ body {
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
-  .story:hover .story__img {
+  .story:hover figure .story__img {
     transform: translateX(0) scale(1);
     filter: blur(2px) brightness(77%) drop-shadow(0.2rem 0.5rem 1rem black); }
 
@@ -1504,6 +1504,10 @@ body {
             .section-stories__cutter-bottom::after {
               margin-bottom: 0;
               margin-top: -20rem; } } }
+  .section-stories .story:hover .section-stories .story__img {
+    transform: translateX(0) scale(1); }
+  .section-stories .story__img[src="img/avatars/Neconspictor.png"] {
+    transform: translateX(-0.2rem) scale(1.1); }
 
 .section-credits {
   background-color: #f7f7f7;
