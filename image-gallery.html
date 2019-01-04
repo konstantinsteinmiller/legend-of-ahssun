@@ -264,6 +264,29 @@
       white-space: nowrap;
       text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black
     }
+
+    .arrows {
+      position: relative;
+      display: block;
+      top: -10rem;
+    }
+
+    .arrows > span:hover {
+      cursor: pointer;
+    }
+
+    .arrows > span img {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      padding: 1rem;
+      transform: translate(-50%, -50%);
+      background-color: rgba(230, 230, 230, 0.15); opacity: 1; display: block;
+    }
+
+    .arrows > span:last-child img {
+      transform: translate(60%, -50%) rotateZ(.5turn);
+    }
     -->
   </style>
 
@@ -1008,6 +1031,17 @@
          data-en="Click for next image">
       Klicke für das nächste Bild
     </div>
+    <div class="arrows"
+         style="background-color: rgba(230, 230, 230, 0.15); opacity: 1; display: block;">
+      <span class="arrows__previous">
+        <img tabindex="0" src="img/sw_arrow_indicator.png"
+              width="60" height="50"/>
+      </span>
+      <span class="arrows__next">
+        <img tabindex="0" src="img/sw_arrow_indicator.png"
+              width="60" height="50"/>
+      </span>
+    </div>
   </div>
 <script>
   //set default view mode
@@ -1030,6 +1064,23 @@
     $customScrollBox_content = $("#customScrollBox .content");
     $dragger_container = $("#dragger_container");
     $dragger = $("#dragger");
+
+    $('.arrows__next').click(function () {
+      $bgimg.click()
+    })
+
+    /* show previous image on left arrow */
+    $('.arrows__previous').click(function () {
+      loadPreviousImage()
+    });
+
+    $(document).keydown(function (e) {
+      if (e.which == 37) {
+        loadPreviousImage()
+      } else if (e.which == 39){
+        $bgimg.click()
+      }
+    })
 
     CustomScroller();
 
@@ -1128,13 +1179,45 @@
       CustomScroller();
     });
 
-    //LargeImageLoad($bgimg);
+    // LargeImageLoad($bgimg);
+    setTimeout(function() {
+      $outer_container_a.first().click()
+    }, 500)
   });
 
   //loading bg image
   $bgimg.load(function () {
     LargeImageLoad($(this));
   });
+
+  function loadPreviousImage() {
+    var $this = $bgimg;
+    if ($bg.data("prevImage")) { //if prev image data is stored
+      $this.css("display", "none");
+      $preloader.fadeIn("fast"); //show preloader
+      $($outer_container.data("selectedThumb")).children(".selected").css("display", "none"); //deselect thumb
+      if ($bg.data("firstImageReached") != "Y") {
+        $($outer_container.data("selectedThumb")).prev().children(".selected").css("display", "block"); //select new thumb
+      } else {
+        $outer_container_a.last().children(".selected").css("display", "block"); //select new thumb - first
+      }
+      //store new selected thumb
+      var selThumb = $outer_container.data("selectedThumb");
+      if ($bg.data("firstImageReached") != "Y") {
+        $outer_container.data("selectedThumb", $(selThumb).prev());
+      } else {
+        $outer_container.data("selectedThumb", $outer_container_a.last());
+      }
+      $bg.data("newTitle", $($outer_container.data("selectedThumb")).children("img").attr("title")); //get and store new image title attribute
+      if ($bg.data("firstImageReached") != "Y") {
+        itemIndex--;
+      } else {
+        itemIndex = lastItemIndex;
+      }
+      $this.attr("src", "").attr("src", $bg.data("prevImage")); //switch image
+    }
+  }
+
 
   function LargeImageLoad($this) {
     $preloader.fadeOut("fast"); //hide preloader
@@ -1144,13 +1227,21 @@
       $this.attr("title", $bg.data("newTitle")); //set new image title attribute
     }
     FullScreenBackground($this); //scale new image
+    $bg.data("prevImage", $($outer_container.data("selectedThumb")).prev().attr("href")); //get and store prev image
     $bg.data("nextImage", $($outer_container.data("selectedThumb")).next().attr("href")); //get and store next image
     if (typeof itemIndex != "undefined") {
       if (itemIndex == lastItemIndex) { //check if it is the last image
         $bg.data("lastImageReached", "Y");
         $bg.data("nextImage", $outer_container_a.first().attr("href")); //get and store next image
+        $bg.data("firstImageReached", "N");
+      }
+      else if (itemIndex == 0) { //check if it is the last image
+        $bg.data("firstImageReached", "Y");
+        $bg.data("lastImageReached", "N");
+        $bg.data("prevImage", $outer_container_a.last().attr("href")); //get and store next image
       } else {
         $bg.data("lastImageReached", "N");
+        $bg.data("firstImageReached", "N");
       }
     } else {
       $bg.data("lastImageReached", "N");
@@ -1185,6 +1276,7 @@
     $(this).children(".selected").css("display", "block");
     //get and store next image and selected thumb
     $outer_container.data("selectedThumb", $this);
+    $bg.data("prevImage", $(this).prev().attr("href"));
     $bg.data("nextImage", $(this).next().attr("href"));
     $bg.data("newTitle", $(this).children("img").attr("title")); //get and store new image title attribute
     itemIndex = getIndex($this); //get clicked item index
