@@ -37,6 +37,28 @@
   </script>
 </head>
 <body onload="onLoad()">
+  <div class="notification">
+    <span class="notification__close" onclick="showNotification(false)">x</span>
+    <div class="notification__text">
+        <span data-de="Wenn du LoA liebst, unterstütze uns doch durch eine"
+              data-en="If you love LoA, support us with a">If you love LoA, support us with a</span>
+      <a class='button notification__donation' href="index.html#modal">
+        <img src="./img/donation.png" alt="" width="20" height="19" style="transform: translateY(5px)">
+        <span data-de="Spende"
+              data-en="donation">Spende</span>
+      </a>
+    </div>
+    <div class="notification__never-ask">
+      <div data-de="Diese Nachricht nicht mehr anzeigen"
+           data-en="Don't show this message anymore">
+        Diese Nachricht nicht mehr anzeigen
+      </div>
+      <span class="notification__checkbox">
+          <input class="notification__input" type='checkbox'
+                 onchange='toggleNeverShowNotification()'></span>
+
+    </div>
+  </div>
   <div class="navigation">
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="navigation__button">

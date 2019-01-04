@@ -44,23 +44,23 @@
   </div>-->
   <!--videos by coverr-->
   <div class="notification">
-    <a href="#header" class="notification__close" onclick="showNotification(event, false)">x</a>
-    <div class="notification__text"
-    data-de="Wenn du LoA liebst, unterstütze uns doch durch eine
-            <a class='button notification__donation' href='index.html#modal'>Spende</a>"
-    data-en="If you love LoA, support us with a
-            <a class='button notification__donation' href='index.html#modal'>donation</a>">
-      If you love LoA, support us with a
-      <a class='button notification__donation' href="index.html#modal">donation</a>
+    <span class="notification__close" onclick="showNotification(false)">x</span>
+    <div class="notification__text">
+      <span data-de="Wenn du LoA liebst, unterstütze uns doch durch eine"
+            data-en="If you love LoA, support us with a">If you love LoA, support us with a</span>
+      <a class='button notification__donation' href="index.html#modal">
+        <img src="./img/donation.png" alt="" width="20" height="19" style="transform: translateY(5px)">
+        <span data-de="Spende"
+              data-en="donation">Spende</span>
+      </a>
     </div>
     <div class="notification__never-ask">
-      <div data-de="Diese Nachricht nie wieder anzeigen"
-           data-en="Never show this message again">
-        Diese Nachricht nie wieder anzeigen
+      <div data-de="Diese Nachricht nicht mehr anzeigen"
+           data-en="Don't show this message anymore">
+        Diese Nachricht nicht mehr anzeigen
       </div>
       <span class="notification__checkbox">
-        <span class="notification__checkbox-checked">x</span>
-        <input class="notification__input" type='checkbox' value='false'
+        <input class="notification__input" type='checkbox'
                onchange='toggleNeverShowNotification()'></span>
 
     </div>

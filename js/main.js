@@ -33,6 +33,8 @@ function onLoad() {
   } else {
     setLanguage('de')
   }
+
+  getNotificationSetting()
 }
 
 function downloadImage(event, img) {
@@ -46,10 +48,16 @@ function downloadImage(event, img) {
   event.preventDefault();
 }
 
-function showNotification(event, show) {
+function showNotification(show) {
+  console.log('show', show)
   const $notification = document.querySelector('.notification');
-  console.log('$notification', $notification)
-  if (show === false) {
+  if (localStorage.hideNotification
+    && localStorage.hideNotification === "true"
+    && show) {
+    return
+  }
+
+  if (!show) {
     $notification.parentNode.removeChild($notification)
   } else {
     $notification.style.opacity = "1";
@@ -57,9 +65,13 @@ function showNotification(event, show) {
   }
 }
 
-function toggleNeverShowNotification(event) {
-  const $notification = event.target.parentNode
-  console.log( event)
+function toggleNeverShowNotification() {
+  const $notificationCheckbox = document.querySelector('.notification__input');
+  localStorage.hideNotification = Boolean($notificationCheckbox.checked)
 }
 
-// setTimeout(function () { showNotification( true) }, 20000);
+function getNotificationSetting() {
+  return localStorage.hideNotification;
+}
+
+setTimeout(function () { showNotification(true) }, 30000);

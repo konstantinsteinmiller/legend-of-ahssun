@@ -8,7 +8,6 @@
   border-radius: $border-radius
   box-shadow: 0 1rem 3rem rgba($color-black, .25)
   text-align: center
-  cursor: pointer
   padding: 2rem
   color: $color-white
   opacity: 0
@@ -29,46 +28,29 @@
     &:link,
     &:visited
       padding: .5rem 1.5rem
-      color: $color-tertiary
+      color: $color-black
+  &__checkbox-checked + &__input::after
+    border: 2px solid $color-quartiary-dark
   &__checkbox
     position: absolute
     right: 0
     top: 0
-    &-checked
-      position: absolute
-      right: .8rem
-      top: 0
-      font-size: 2rem
-      line-height: 2rem
-      color: $color-black
-    &::after
-      content: ''
-      display: inline-block
-      top: 0
-      right: 0
-      float: right
-      width: 2.5rem
-      height: 2.5rem
-      margin-left: 1rem
-      background-color: lightgrey
-      border-radius: $border-radius
-      border: 2px solid $color-grey-light-3
   &__input
-    display: none
-    &::after
-      content: ''
-      display: inline-block
-      top: -2rem
-      right: 0
-      float: right
-      width: 1.5rem
-      height: 1.5rem
-      margin-left: 1rem
-      background-color: green
-      border-radius: $border-radius
-      border: 2px solid $color-grey-dark-2
+    width: 2rem
+    height: 2rem
+    border-radius: $border-radius
+    transform: translateY(4px)
+    &:hover
+      cursor: pointer
 
   &__close
+    color: white
+    position: absolute
+    top: 1rem
+    right: 1rem
+    font-size: 2rem
+    text-decoration: none
+    display: inline-block
     line-height: 1rem
     padding: .5rem
     text-align: right
@@ -81,4 +63,5 @@
       text-decoration: none
       display: inline-block
     &:hover
+      cursor: pointer
       color: $color-quintiary-light

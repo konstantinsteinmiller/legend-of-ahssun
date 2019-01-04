@@ -1033,7 +1033,6 @@ body {
   border-radius: 5px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
   text-align: center;
-  cursor: pointer;
   padding: 2rem;
   color: white;
   opacity: 0;
@@ -1051,45 +1050,28 @@ body {
     margin-left: 1rem; }
     .notification__donation:link, .notification__donation:visited {
       padding: .5rem 1.5rem;
-      color: #1b65d5; }
+      color: black; }
+  .notification__checkbox-checked + .notification__input::after {
+    border: 2px solid #28b485; }
   .notification__checkbox {
     position: absolute;
     right: 0;
     top: 0; }
-    .notification__checkbox-checked {
-      position: absolute;
-      right: .8rem;
-      top: 0;
-      font-size: 2rem;
-      line-height: 2rem;
-      color: black; }
-    .notification__checkbox::after {
-      content: '';
-      display: inline-block;
-      top: 0;
-      right: 0;
-      float: right;
-      width: 2.5rem;
-      height: 2.5rem;
-      margin-left: 1rem;
-      background-color: lightgrey;
-      border-radius: 5px;
-      border: 2px solid #bbb; }
   .notification__input {
-    display: none; }
-    .notification__input::after {
-      content: '';
-      display: inline-block;
-      top: -2rem;
-      right: 0;
-      float: right;
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-left: 1rem;
-      background-color: green;
-      border-radius: 5px;
-      border: 2px solid #777; }
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    transform: translateY(4px); }
+    .notification__input:hover {
+      cursor: pointer; }
   .notification__close {
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    display: inline-block;
     line-height: 1rem;
     padding: .5rem;
     text-align: right; }
@@ -1102,6 +1084,7 @@ body {
       text-decoration: none;
       display: inline-block; }
     .notification__close:hover {
+      cursor: pointer;
       color: #bf191c; }
 
 .navigation__checkbox {
