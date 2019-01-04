@@ -1037,6 +1037,7 @@ body {
   color: white;
   opacity: 0;
   visibility: hidden;
+  height: 0;
   transition: opacity .3s; }
   .notification__text {
     display: inline-block; }

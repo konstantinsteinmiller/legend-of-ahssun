@@ -62,6 +62,7 @@ function showNotification(show) {
   } else {
     $notification.style.opacity = "1";
     $notification.style.visibility = "visible";
+    $notification.style.height = "auto";
   }
 }
 
