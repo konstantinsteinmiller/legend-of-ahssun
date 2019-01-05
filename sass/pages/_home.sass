@@ -88,7 +88,8 @@
       transform: translateX(0) scale(1)
     &__img[src="img/avatars/Neconspictor.png"]
       transform: translateX(-.2rem) scale(1.1)
-
+    &__img[src="img/avatars/Zuben2.jpg"]
+      transform: translateX(-0rem) scale(0.9)
 
 .section-credits
   background-color: $color-grey-light-1
@@ -115,7 +116,8 @@
         width: 100%!important
 
     @include respond(tab-port)
-      &:nth-child(2) > .col-1-of-4:nth-child(3)
+      &:nth-child(2) > .col-1-of-4:nth-child(3),
+      &:nth-child(3) > .col-1-of-4:nth-child(3)
         float: right
 
 .section__book

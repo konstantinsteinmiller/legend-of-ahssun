@@ -1492,6 +1492,8 @@ body {
     transform: translateX(0) scale(1); }
   .section-stories .story__img[src="img/avatars/Neconspictor.png"] {
     transform: translateX(-0.2rem) scale(1.1); }
+  .section-stories .story__img[src="img/avatars/Zuben2.jpg"] {
+    transform: translateX(0rem) scale(0.9); }
 
 .section-credits {
   background-color: #f7f7f7;
@@ -1517,7 +1519,8 @@ body {
     .section-credits .row [class*="col-"] {
       width: 100% !important; } }
   @media only screen and (max-width: 56.25em) {
-    .section-credits .row:nth-child(2) > .col-1-of-4:nth-child(3) {
+    .section-credits .row:nth-child(2) > .col-1-of-4:nth-child(3),
+    .section-credits .row:nth-child(3) > .col-1-of-4:nth-child(3) {
       float: right; } }
 
 .section__book {

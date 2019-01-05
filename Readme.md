@@ -7,7 +7,7 @@ The official LoA website: [http://legendofahssun.worldofgothic.com](http://legen
 - walkthrough guide
 
 
-## about
+## About
 This is the code for the official Legend of Ahssun website.
 Legend of Ahssûn is a total conversion mod for Gothic 2, a medieval fantasy RPG from Essen in Germany.
 
